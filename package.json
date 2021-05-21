@@ -1,0 +1,114 @@
+{
+  "name": "rcl",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "tools/*"
+  ],
+  "scripts": {
+    "pkg": "manypkg run",
+    "boot": "yarn && yarn bootstrap",
+    "bootstrap": "lerna bootstrap",
+    "prepare": "husky install config/husky",
+    "prebuild": "yarn clean-dist",
+    "build": "lerna run build --stream",
+    "prebuild:storybook": "rimraf storybook-static",
+    "build:storybook": "build-storybook",
+    "dev": "start-storybook -p 6006",
+    "start": "start-storybook -p 6006",
+    "clean": "lerna clean --yes && rimraf coverage dist node_modules",
+    "clean-dist": "lerna exec -- rimraf dist",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md,yaml,yml}' --ignore-path ./config/.prettierignore",
+    "lint": "lerna run lint --stream",
+    "test": "jest --env=jsdom --passWithNoTests",
+    "test:ci": "jest --runInBand",
+    "test:ci:cov": "yarn test:ci --coverage",
+    "test:cov": "yarn test --coverage",
+    "test:watch": "yarn test --watch -u",
+    "changeset": "changeset",
+    "release": "changeset publish",
+    "component:add": "ts-node ./tools/create-component"
+  },
+  "lint-staged": {
+    "extends": "./config/.lintstagedrc"
+  },
+  "browserslist": [
+    "> 2% in DE",
+    "last 3 versions",
+    "Firefox ESR",
+    "not dead"
+  ],
+  "prettier": "./config/.prettierrc.json",
+  "eslintConfig": {
+    "extends": "./config/.eslintrc.json"
+  },
+  "stylelint": {
+    "extends": "./config/.stylelintrc.json"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@changesets/changelog-github": "^0.4.0",
+    "@changesets/cli": "^2.16.0",
+    "@manypkg/cli": "^0.17.0",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.2",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.4",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "husky": "^6.0.0",
+    "import-sort": "^6.0.0",
+    "import-sort-parser-typescript": "^6.0.0",
+    "jest": "^26.6.3",
+    "jest-environment-jsdom": "^26.6.2",
+    "jest-watch-typeahead": "^0.6.3",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^4.1.0",
+    "ts-jest": "^26.5.6",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "importSort": {
+    ".js, .jsx, .es6, .es": {
+      "parser": "babylon",
+      "style": "module",
+      "options": {}
+    },
+    ".ts, .tsx": {
+      "parser": "typescript",
+      "style": "module",
+      "options": {}
+    }
+  }
+}

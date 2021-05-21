@@ -1,0 +1,15 @@
+# node
+**/node_modules/**
+
+# production
+**/dist/**
+**/storybook-static/**
+
+# tempaltes
+**/template/**
+
+# test
+**/coverage/**
+
+# misc
+**/.prettierrc

@@ -1,0 +1,38 @@
+{
+  "name": "@easyfeedback/create-component",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Tool to create a new component.",
+  "homepage": "https://github.com/easyfeedback/RCL#readme",
+  "bugs": {
+    "url": "https://github.com/easyfeedback/RCL/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/easyfeedback/RCL.git"
+  },
+  "license": "MIT",
+  "author": "Alexander Böhm",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "concurrently yarn:lint:*",
+    "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
+    "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
+    "lint:types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^9.0.11",
+    "@types/listr": "^0.14.3",
+    "@types/lodash": "^4.14.169",
+    "@types/mustache": "^4.1.1",
+    "@types/prompts": "^2.0.11",
+    "execa": "^5.0.0",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.1.7",
+    "listr": "^0.14.3",
+    "lodash": "^4.17.21",
+    "mustache": "^4.2.0",
+    "prompts": "^2.4.1",
+    "yargs": "^17.0.1"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "Inserts data-testid attribute": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "dtid",
+    "body": ["data-testid=\"${0}\""],
+    "description": "Inserts data-testid attribute"
+  },
+  "Inserts useEffect hook": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "ueh",
+    "body": ["useEffect(() => {${0}}, []);"],
+    "description": "Inserts useEffect hook"
+  },
+  "Inserts useState hook": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "ush",
+    "body": "const [${1}, set${1/(.)/${1:/upcase}/}] = useState(${0});",
+    "description": "Inserts useState hook"
+  },
+  "Inserts useRef hook": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "ureh",
+    "body": ["const ${1}Ref = useRef(${0});"],
+    "description": "Inserts useRef hook"
+  },
+  "Inserts useRouter hook": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "uroh",
+    "body": ["const router = useRouter();"],
+    "description": "Inserts useRouter hook"
+  }
+}

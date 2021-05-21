@@ -1,0 +1,9 @@
+# node
+**/node_modules/**
+
+# production
+**/dist/**
+**/storybook-static/**
+
+# test
+**/coverage/**

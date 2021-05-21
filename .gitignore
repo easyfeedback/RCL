@@ -1,0 +1,18 @@
+# node
+.npmrc
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# production
+dist
+storybook-static
+
+# test
+coverage
+
+# misc
+.DS_Store
+.env*
+!.env*.example
