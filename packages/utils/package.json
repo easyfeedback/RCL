@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/utils",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Common utilities and types for the easyfeedback components.",
   "keywords": [
     "easyfeedback",
@@ -44,7 +44,7 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/test-utils": "^0.0.0"
+    "@easyfeedback/test-utils": "^1.0.0"
   },
   "devDependencies": {
     "react": "^17.0.2"
