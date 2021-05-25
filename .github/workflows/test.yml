@@ -79,7 +79,6 @@ jobs:
         env:
           CI: true
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_ICU_DATA: node_modules/full-icu
         run: yarn run test:ci:cov
 
       - name: Upload coverage to Codecov

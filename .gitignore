@@ -1,10 +1,6 @@
-# node
-.npmrc
-node_modules
-npm-debug.log*
+# yarn
 yarn-debug.log*
 yarn-error.log*
-
 # https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
 .yarn/*
 !.yarn/patches

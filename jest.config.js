@@ -6,7 +6,6 @@ module.exports = {
     '^.+\\.(ts|tsx)?$': 'ts-jest/dist',
   },
   modulePathIgnorePatterns: ['<rootDir>/storybook-static', '<rootDir>/tools'],
-  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$'],
   coveragePathIgnorePatterns: ['<rootDir>/storybook-static', '<rootDir>/tools'],
   setupFilesAfterEnv: ['./config/jest-setup.ts'],
   globals: {
