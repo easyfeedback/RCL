@@ -118,15 +118,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //npm.pkg.github.com/:_authToken=$GH_RELEASE_TOKEN
-          EOF
-        env:
-          GH_RELEASE_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
+        run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Build packages
         run: yarn build
