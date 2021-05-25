@@ -22,7 +22,7 @@ const app = {
   author: packageJson.author,
 }
 
-const argv = yargs
+const argv = await yargs
   .scriptName(app.name)
   .version(app.version)
   .strict()
