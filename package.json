@@ -15,7 +15,7 @@
     "build:storybook": "build-storybook",
     "dev": "start-storybook -p 6006",
     "start": "start-storybook -p 6006",
-    "clean-dist": "yarn workspaces foreach --parallel rimraf dist",
+    "clean-dist": "yarn workspaces foreach --parallel run clean-dist",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md,yaml,yml}' --ignore-path ./config/.prettierignore",
     "lint": "yarn workspaces foreach --parallel run lint",
     "test": "jest --env=jsdom --passWithNoTests",
