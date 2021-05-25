@@ -29,7 +29,9 @@
     "dist"
   ],
   "scripts": {
+    "prebuild": "yarn clean-dist",
     "build": "tsc",
+    "clean-dist": "rimraf dist",
     "lint": "concurrently -n js,style,types 'yarn lint:js' 'yarn lint:style' 'yarn lint:types'",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
     "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
