@@ -52,9 +52,9 @@
   },
   "peerDependencies": {
     "@chakra-ui/react": "^1.6.0",
-    "@emotion/react": "^11.0.0",
-    "@emotion/styled": "^11.0.0",
-    "framer-motion": "^4.0.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.0",
     "react": "^16.13.0 || ^17.0.0"
   },
   "publishConfig": {
