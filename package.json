@@ -9,7 +9,6 @@
   "scripts": {
     "pkg": "manypkg run",
     "prepare": "husky install config/husky",
-    "prebuild": "yarn clean-dist",
     "build": "yarn workspaces foreach --parallel run build",
     "prebuild:storybook": "rimraf storybook-static",
     "build:storybook": "build-storybook",
