@@ -29,10 +29,8 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "yarn clean-dist",
     "build": "tsc",
-    "clean-dist": "rimraf dist",
-    "lint": "concurrently -n js,style,types 'yarn lint:js' 'yarn lint:style' 'yarn lint:types'",
+    "lint": "concurrently yarn:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
     "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
     "lint:types": "tsc --noEmit",
@@ -49,10 +47,8 @@
     "@chakra-ui/react": "^1.6.2",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
-    "@types/jest": "^26.0.23",
     "framer-motion": "^4.1.17",
-    "react": "^17.0.2",
-    "ts-jest": "^26.5.6"
+    "react": "^17.0.2"
   },
   "peerDependencies": {
     "@chakra-ui/react": "^1.6.0",

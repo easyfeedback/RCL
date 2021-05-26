@@ -15,7 +15,7 @@
   "author": "Alexander Böhm",
   "main": "src/index.ts",
   "scripts": {
-    "lint": "concurrently -n js,style,types 'yarn lint:js' 'yarn lint:style' 'yarn lint:types'",
+    "lint": "concurrently yarn:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
     "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
     "lint:types": "tsc --noEmit"
@@ -26,13 +26,10 @@
     "@testing-library/react-hooks": "^7.0.0",
     "@testing-library/user-event": "^13.1.9",
     "@types/jest-axe": "^3.5.1",
-    "axe-core": "^4.2.1",
     "jest-axe": "^4.1.0",
     "react-test-renderer": "^17.0.2"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.23",
-    "@types/react": "^17.0.7",
     "react": "^17.0.2"
   },
   "peerDependencies": {
