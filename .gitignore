@@ -1,4 +1,5 @@
 # yarn
+.npmrc
 yarn-debug.log*
 yarn-error.log*
 # https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
