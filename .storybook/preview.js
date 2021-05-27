@@ -1,4 +1,7 @@
-import { ChakraProvider, theme } from '@chakra-ui/react'
+import '@fontsource/lato'
+
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { theme } from '@easyfeedback/theme'
 import React from 'react'
 
 export const parameters = {
@@ -13,7 +16,7 @@ export const parameters = {
 
 const withChakra = (StoryFn) => {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={extendTheme(theme)}>
       <StoryFn />
     </ChakraProvider>
   )

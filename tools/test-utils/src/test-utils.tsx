@@ -16,27 +16,27 @@ function ChildrenPassthrough({ children }: { children: React.ReactElement }) {
 
 export interface TestOptions extends Omit<RenderOptions, 'wrapper'> {
   /**
-   * optional additional wrapper, e.g. Context
+   * Optional additional wrapper, e.g. Context
    *
    * @example
-   * ```ts
-   * // single wrapper
-   * render(<MyConponent />, {
-   *  wrapper: MyContext
-   * });
+   *   ;```ts
+   *   // single wrapper
+   *   render(<MyConponent />, {
+   *    wrapper: MyContext
+   *   });
    *
-   * // multiple wrapper
-   * render(<MyConponent />, {
-   *  wrapper: ({ children }) => (
-   *    <ContextA>
-   *      <ContextB>
-   *        {children}
-   *      <ContextB />
-   *    <ContextA />
-   *  )
-   * });
+   *   // multiple wrapper
+   *   render(<MyConponent />, {
+   *    wrapper: ({ children }) => (
+   *      <ContextA>
+   *        <ContextB>
+   *          {children}
+   *        <ContextB />
+   *      <ContextA />
+   *    )
+   *   });
    *
-   * ```
+   *   ```
    */
   wrapper?: typeof ChildrenPassthrough
 }
@@ -44,9 +44,9 @@ export interface TestOptions extends Omit<RenderOptions, 'wrapper'> {
 /**
  * Custom render for @testing-library/react
  *
+ * @param component The component under test
+ * @param options Customized test options
  * @see https://testing-library.com/docs/react-testing-library/setup#custom-render
- * @param component the component under test
- * @param options customized test options
  */
 export const render = (
   ui: UI,
@@ -79,20 +79,16 @@ type TestA11YOptions = TestOptions & { axeOptions?: RunOptions }
  * Wrapper for jest-axe
  *
  * @example
- * ```jsx
- * it('passes a11y test', async () => {
- *  await testA11Y(<MyComponent />, options);
- * });
+ *   it('passes a11y test', async () => {
+ *     await testA11Y(<MyComponent />, options)
+ *   })
  *
- * // sometimes we need to perform interactions first to render conditional UI
- * it('passes a11y test when open', async () => {
- *  const { container } = render(<MyComponent />, options);
- *
- *  fireEvent.click(screen.getByRole('button'));
- *
- *  await testA11Y(container, options);
- * });
- * ```
+ *   // sometimes we need to perform interactions first to render conditional UI
+ *   it('passes a11y test when open', async () => {
+ *     const { container } = render(<MyComponent />, options)
+ *     fireEvent.click(screen.getByRole('button'))
+ *     await testA11Y(container, options)
+ *   })
  *
  * @see https://github.com/nickcolley/jest-axe#testing-react-with-react-testing-library
  */
