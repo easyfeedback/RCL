@@ -12,15 +12,15 @@
     "pkg": "manypkg run",
     "boot": "yarn && yarn bootstrap",
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run build --stream",
+    "build": "lerna run build --parallel",
     "prebuild:storybook": "rimraf storybook-static",
     "build:storybook": "build-storybook",
     "dev": "start-storybook -p 6006",
     "start": "start-storybook -p 6006",
     "clean": "lerna clean --yes && rimraf coverage dist node_modules",
-    "clean-dist": "lerna exec -- rimraf dist",
+    "clean-dist": "lerna exec --parallel -- rimraf dist",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md,yaml,yml}' --ignore-path ./config/.prettierignore",
-    "lint": "lerna run lint --stream",
+    "lint": "lerna run lint --parallel",
     "test": "jest --env=jsdom --passWithNoTests",
     "test:ci": "jest --runInBand",
     "test:ci:cov": "yarn test:ci --coverage",
@@ -32,7 +32,18 @@
     "component:add": "ts-node ./tools/create-component"
   },
   "lint-staged": {
-    "extends": "./config/.lintstagedrc"
+    "*.{ts,tsx}": [
+      "tsc --noEmit --jsx react-jsx"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ./config/.eslintignore"
+    ],
+    "*.{css,scss,js,jsx,ts,tsx}": [
+      "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ./config/.stylelintignore"
+    ],
+    "*.{js,jsx,ts,tsx,json,md,yaml,yml}": [
+      "yarn format"
+    ]
   },
   "browserslist": [
     "> 2% in DE",

@@ -1,5 +1,6 @@
 /**
  * Please ensure to add the `Lato` font to the project.
+ *
  * @see https://chakra-ui.com/guides/using-fonts
  */
 export const fonts = {
