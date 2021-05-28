@@ -3,7 +3,7 @@
 
 # production
 **/dist/**
-**/storybook-static/**
+**/docs-build/**
 
 # tempaltes
 **/template/**

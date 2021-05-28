@@ -7,8 +7,7 @@ addons.setConfig({
     base: 'light',
     brandTitle: 'React UI Library',
     brandUrl: 'https://github.com/easyfeedback/RCL',
-    brandImage:
-      'https://github.com/easyfeedback/RCL/raw/main/.storybook/ef-logo-short.svg?sanitize=true',
+    brandImage: '/ef-logo-short.svg?sanitize=true',
   }),
 })
 
