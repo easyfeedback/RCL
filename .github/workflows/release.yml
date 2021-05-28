@@ -137,7 +137,7 @@ jobs:
       - name: Create Release Pull Request
         uses: changesets/action@master
         with:
-          commit: 'update version and deploy packages'
+          commit: 'Update version and deploy packages'
           title: 'Update version and deploy packages'
           publish: yarn changeset publish
           version: yarn changeset version
