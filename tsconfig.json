@@ -24,7 +24,7 @@
     "strictPropertyInitialization": true
   },
   "include": ["packages", "tools", "config/jest-setup.ts"],
-  "exclude": ["node_modules", "storybook-static"],
+  "exclude": ["node_modules", "docs-build"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",

@@ -7,7 +7,7 @@ yarn-error.log*
 
 # production
 dist
-storybook-static
+docs-build
 
 # test
 coverage
