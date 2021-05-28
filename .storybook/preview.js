@@ -12,6 +12,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  layout: 'centered',
 }
 
 const withChakra = (StoryFn) => {
