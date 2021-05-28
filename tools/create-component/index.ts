@@ -2,6 +2,7 @@
 
 import { join } from 'path'
 
+import execa from 'execa'
 import fs from 'fs-extra'
 import glob from 'glob'
 import Listr from 'listr'
@@ -55,10 +56,11 @@ const template = fs.realpath(join(__dirname, 'template'))
 type Answers = {
   name: string
   description: string
-  repositoryUrl: string
+  filepath: string
+  shouldRunBootstrap: boolean
   author: string
   filename: string
-  filepath: string
+  repositoryUrl: string
 }
 
 const getPrompts: () => Promise<Answers> = async () => {
@@ -73,6 +75,11 @@ const getPrompts: () => Promise<Answers> = async () => {
         initial: argv.filename,
       },
       {
+        type: 'text',
+        name: 'description',
+        message: 'Application description',
+      },
+      {
         type: 'toggle',
         name: 'useDefaultLocation',
         message: 'Install in the default packages folder?',
@@ -82,14 +89,17 @@ const getPrompts: () => Promise<Answers> = async () => {
       },
       {
         type: (prev) => (prev ? null : 'text'),
-        name: 'name',
-        message: 'Application name',
-        initial: argv.filename,
+        name: 'filepath',
+        message: 'Package location',
+        initial: argv.filepath,
       },
       {
-        type: 'text',
-        name: 'description',
-        message: 'Application description',
+        type: 'toggle',
+        name: 'shouldRunBootstrap',
+        message: 'Do you want bootstrap the repository with lerna?',
+        initial: true,
+        active: 'yes',
+        inactive: 'no',
       },
     ],
     {
@@ -103,10 +113,11 @@ const getPrompts: () => Promise<Answers> = async () => {
   const data: Answers = {
     name: _.kebabCase(response.name),
     description: response.description,
-    filename: _.upperFirst(_.camelCase(response.name)),
-    filepath: `${argv.filepath}/${_.kebabCase(response.name)}`,
-    repositoryUrl: app.repoUrl,
+    filepath: `${response.filepath || argv.filepath}/${_.kebabCase(response.name)}`,
+    shouldRunBootstrap: response.shouldRunBootstrap,
     author: app.author,
+    filename: _.upperFirst(_.camelCase(response.name)),
+    repositoryUrl: app.repoUrl,
   }
 
   return data
@@ -147,6 +158,15 @@ const init = async () => {
           fs.renameSync(file, file.replace(replaceComponentString, ctx.data.filename))
         })
       })
+    },
+  })
+
+  progress.add({
+    title: 'Bootstrap dependencies by lerna',
+    enabled: (ctx: { data: Answers }) => ctx.data.shouldRunBootstrap,
+    task: () => {
+      execa('cd', [projectRoot])
+      execa('yarn', ['bootstrap'])
     },
   })
 
