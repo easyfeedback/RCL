@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/theme",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The default theme of the RCL components.",
   "keywords": [
     "easyfeedback"
@@ -41,7 +41,7 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/test-utils": "^1.0.0"
+    "@easyfeedback/test-utils": "^1.0.1"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.2",

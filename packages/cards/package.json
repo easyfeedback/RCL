@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/cards",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "My cards description",
   "keywords": [
     "easyfeedback"
@@ -41,8 +41,8 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/buttons": "^0.0.0",
-    "@easyfeedback/test-utils": "^1.0.0"
+    "@easyfeedback/buttons": "^1.0.0",
+    "@easyfeedback/test-utils": "^1.0.1"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.2",
