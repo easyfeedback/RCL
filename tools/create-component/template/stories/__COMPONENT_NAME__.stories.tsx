@@ -1,4 +1,3 @@
-import { Center } from '@chakra-ui/layout'
 import { Meta, Story } from '@storybook/react/types-6-0'
 
 import { {{filename}}, {{filename}}Props } from '../src/{{filename}}'
@@ -9,11 +8,7 @@ export default {
   args: {},
 } as Meta
 
-const Template: Story<{{filename}}Props> = (args) => (
-  <Center>
-    <{{filename}} {...args} />
-  </Center>
-)
+const Template: Story<{{filename}}Props> = (args) => <{{filename}} {...args} />
 
 export const Default = Template.bind({})
 
