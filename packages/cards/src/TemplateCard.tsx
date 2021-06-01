@@ -52,8 +52,8 @@ export const TemplateCard = ({
         zIndex="hide"
       />
 
-      <Box pos="absolute" top="1" right="1" color="white" zIndex="docked">
-        <MenuButton menuItems={menuItems} />
+      <Box pos="absolute" top="1" right="1" zIndex="docked">
+        <MenuButton color="white" menuItems={menuItems} />
       </Box>
 
       <Box
