@@ -23,7 +23,7 @@ export type TemplateCardProps = {
   imageSrc: string
   /** The number of views. */
   views?: number
-} & MenuButtonProps &
+} & Omit<MenuButtonProps, 'color'> &
   StateDotProps
 
 const componentHeight = 250
