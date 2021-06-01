@@ -7,13 +7,18 @@ describe('StateDot component', () => {
     await testA11y(<StateDot state="published" />)
   })
 
+  it('renders the dot with the color for initialized', () => {
+    const { getByTestId } = render(<StateDot state="initialized" />)
+    expect(getByTestId('StateDot')).toHaveStyleRule('background-color', 'gray.500')
+  })
+
   it('renders the dot with the color for published', () => {
     const { getByTestId } = render(<StateDot state="published" />)
     expect(getByTestId('StateDot')).toHaveStyleRule('background-color', 'teal.500')
   })
 
-  it('renders the dot with the color for planned', () => {
-    const { getByTestId } = render(<StateDot state="planned" />)
+  it('renders the dot with the color for paused', () => {
+    const { getByTestId } = render(<StateDot state="paused" />)
     expect(getByTestId('StateDot')).toHaveStyleRule('background-color', 'yellow.500')
   })
 
