@@ -1,5 +1,5 @@
 ---
-'@easyfeedback/cards': minor
+'@easyfeedback/buttons': minor
 ---
 
 Add the `MenuButton` component
