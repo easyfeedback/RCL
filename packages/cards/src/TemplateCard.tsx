@@ -22,7 +22,7 @@ export type TemplateCardProps = {
   /** The image src attribute. */
   imageSrc: string
   /** The number of views. */
-  views?: string
+  views?: number
 } & MenuButtonProps &
   StateDotProps
 
@@ -94,7 +94,14 @@ export const TemplateCard = ({
 
         {views && (
           <HStack color="gray.700" data-testid="views">
-            <Text as="span" zIndex="docked" title={views} fontSize="sm" isTruncated maxWidth={145}>
+            <Text
+              as="span"
+              zIndex="docked"
+              title={`${views}`}
+              fontSize="sm"
+              isTruncated
+              maxWidth={145}
+            >
               {views}
             </Text>
             <Icon as={IoStatsChartSharp} title="survey stats" zIndex="docked" w="3" h="3" />

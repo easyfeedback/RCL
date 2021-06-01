@@ -25,7 +25,7 @@ describe('TemplateCard component', () => {
   })
 
   it('renders with the views section', () => {
-    const { getByTestId } = render(<TemplateCard {...mockDefaultProps} views="213" />)
+    const { getByTestId } = render(<TemplateCard {...mockDefaultProps} views={213} />)
     expect(getByTestId('views').firstChild).toContainHTML('213')
   })
 })
