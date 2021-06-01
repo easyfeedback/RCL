@@ -6,6 +6,10 @@ import React from 'react'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  backgrounds: {
+    default: 'light',
+    values: [{ name: 'light', value: '#EFEFEF' }],
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
