@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react'
 
 export type StateDotProps = {
   /** The current state of the template. */
-  state: 'published' | 'planned' | 'closed'
+  state: 'initialized' | 'published' | 'paused' | 'closed'
 }
 
 export const StateDot = ({ state }: StateDotProps) => {
@@ -10,10 +10,13 @@ export const StateDot = ({ state }: StateDotProps) => {
     let color
     let title
     switch (state) {
-      // TODO: The cases are currently only a placeholder and have to change to its correct values
-      case 'planned':
+      case 'initialized':
+        color = 'gray.500'
+        title = 'initialized'
+        break
+      case 'paused':
         color = 'yellow.500'
-        title = 'planned'
+        title = 'paused'
         break
       case 'closed':
         color = 'red.500'

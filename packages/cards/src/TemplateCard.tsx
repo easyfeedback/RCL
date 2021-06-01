@@ -1,4 +1,14 @@
-import { Box, HStack, Heading, Icon, Image, LinkBox, LinkOverlay, Text } from '@chakra-ui/react'
+import {
+  Box,
+  HStack,
+  Heading,
+  Icon,
+  Image,
+  LinkBox,
+  LinkOverlay,
+  Text,
+  theme,
+} from '@chakra-ui/react'
 import { MenuButton, MenuButtonProps } from '@easyfeedback/buttons'
 import { IoStatsChartSharp } from 'react-icons/io5'
 
@@ -38,6 +48,7 @@ export const TemplateCard = ({
       rounded="base"
       _hover={{ boxShadow: 'xl' }}
       data-testid="TemplateCard"
+      title={title}
     >
       <Image
         src={imageSrc}
@@ -52,7 +63,7 @@ export const TemplateCard = ({
         zIndex="hide"
       />
 
-      <Box pos="absolute" top="1" right="1" zIndex="docked">
+      <Box pos="absolute" top="1" title="options" right="1" zIndex={theme.zIndices.docked + 1}>
         <MenuButton color="white" menuItems={menuItems} />
       </Box>
 
@@ -65,7 +76,10 @@ export const TemplateCard = ({
         borderTopRadius="base"
       >
         <Heading size="base" fontWeight="normal" color="white">
-          <LinkOverlay href={href}>{title}</LinkOverlay>
+          <LinkOverlay href={href}>
+            <Text noOfLines={3}>{title}</Text>
+            {/* space for Labels/Tags here */}
+          </LinkOverlay>
         </Heading>
       </Box>
 
@@ -80,10 +94,10 @@ export const TemplateCard = ({
 
         {views && (
           <HStack color="gray.700" data-testid="views">
-            <Text as="span" fontSize="sm">
+            <Text as="span" zIndex="docked" title={views} fontSize="sm" isTruncated maxWidth={145}>
               {views}
             </Text>
-            <Icon as={IoStatsChartSharp} w="3" h="3" />
+            <Icon as={IoStatsChartSharp} title="survey stats" zIndex="docked" w="3" h="3" />
           </HStack>
         )}
       </HStack>
