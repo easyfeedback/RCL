@@ -1,11 +1,13 @@
 import '@testing-library/jest-dom/extend-expect'
 
+import { matchers } from '@emotion/jest'
 import { RenderOptions, RenderResult, fireEvent, render as rtlRender } from '@testing-library/react'
 import { RunOptions } from 'axe-core'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import * as React from 'react'
 
 expect.extend(toHaveNoViolations)
+expect.extend(matchers)
 
 type UI = Parameters<typeof rtlRender>[0]
 
