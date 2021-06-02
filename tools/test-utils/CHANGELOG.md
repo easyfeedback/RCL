@@ -1,5 +1,13 @@
 # @easyfeedback/test-utils
 
+## 1.1.0
+
+### Minor Changes
+
+- [#31](https://github.com/easyfeedback/RCL/pull/31)
+  [`7b83899`](https://github.com/easyfeedback/RCL/commit/7b838996624faff1b60c2d4ac558618b89593450)
+  Thanks [@mheob](https://github.com/mheob)! - Add `@emotion/jest` matcher to the test utils
+
 ## 1.0.1
 
 ### Patch Changes
