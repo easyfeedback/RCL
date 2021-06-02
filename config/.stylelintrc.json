@@ -2,7 +2,7 @@
   "root": true,
   "extends": [
     "stylelint-config-recommended",
-    "stylelint-config-rational-order",
+    "stylelint-config-property-sort-order-smacss",
     "stylelint-config-styled-components"
   ]
 }
