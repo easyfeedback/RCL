@@ -1,8 +1,13 @@
 {
   "name": "@easyfeedback/test-utils",
   "version": "1.1.0",
-  "private": true,
-  "description": "Testing utilities for the components.",
+  "description": "Testing utilities for the RCL components.",
+  "keywords": [
+    "easyfeedback",
+    "tests",
+    "react",
+    "utilities"
+  ],
   "homepage": "https://github.com/easyfeedback/RCL#readme",
   "bugs": {
     "url": "https://github.com/easyfeedback/RCL/issues"
@@ -13,7 +18,11 @@
   },
   "license": "MIT",
   "author": "Alexander Böhm",
-  "main": "src/index.ts",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "src"
+  ],
   "scripts": {
     "lint": "concurrently yarn:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
@@ -35,5 +44,8 @@
   },
   "peerDependencies": {
     "react": "^16.13.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

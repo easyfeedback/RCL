@@ -40,9 +40,6 @@
     "test:cov": "yarn test --coverage",
     "test:watch": "yarn test --watch -u"
   },
-  "dependencies": {
-    "@easyfeedback/test-utils": "^1.0.1"
-  },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.3",
     "@emotion/react": "^11.4.0",
