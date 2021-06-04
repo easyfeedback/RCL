@@ -1,5 +1,22 @@
 # @easyfeedback/cards
 
+## 1.1.1
+
+### Patch Changes
+
+- [#40](https://github.com/easyfeedback/RCL/pull/40)
+  [`1873938`](https://github.com/easyfeedback/RCL/commit/1873938d7e425fe0ca91fdb9922fa21bf066e325)
+  Thanks [@mheob](https://github.com/mheob)! - Move `test-utils` from deps to devDeps
+
+* [#37](https://github.com/easyfeedback/RCL/pull/37)
+  [`f32548f`](https://github.com/easyfeedback/RCL/commit/f32548fd36c0fe0e37ab114efe7ac9dfd40a75d8)
+  Thanks [@mheob](https://github.com/mheob)! - Add missing documentation
+
+* Updated dependencies
+  [[`1873938`](https://github.com/easyfeedback/RCL/commit/1873938d7e425fe0ca91fdb9922fa21bf066e325),
+  [`f32548f`](https://github.com/easyfeedback/RCL/commit/f32548fd36c0fe0e37ab114efe7ac9dfd40a75d8)]:
+  - @easyfeedback/buttons@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
