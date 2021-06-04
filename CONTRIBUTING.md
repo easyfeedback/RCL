@@ -11,13 +11,8 @@ valuable. Here's a few guidelines that should help you as you prepare your contr
 
 - [Setup the Project](#setup-the-project)
 - [Development](#development)
-  - [Tooling](#tooling)
-  - [Commands](#commands)
-  - [Storybook](#storybook)
 - [Think you found a bug?](#think-you-found-a-bug)
 - [Proposing new or changed API?](#proposing-new-or-changed-api)
-  - [Steps to PR](#steps-to-pr)
-  - [Tests](#tests)
 - [License](#license)
 
 ## Setup the Project
@@ -39,8 +34,8 @@ The following steps will get you up and running to contribute to our UI:
    cd RCL
    ```
 
-1. Setup all the dependencies and packages by running `yarn boot`. This command will install
-   dependencies and bootstrap the repo using `lerna`
+1. Setup all the dependencies and packages by running `yarn install` or simply `yarn`. This command
+   will install dependencies and bootstrap the repo using `lerna`
 
 ## Development
 
@@ -58,10 +53,8 @@ structure and we treat each component as an independent package that can be cons
 
 ### Commands
 
-**`yarn boot`**: installs all dependencies, bootstraps the entire project and symlinks all
-dependencies for cross-component development.\
-**`yarn bootstrap`**: bootstraps the entire project and symlinks all dependencies for cross-component
-development.
+**`yarn bootstrap`**: bootstraps the entire project and symlinks all dependencies for
+cross-component development.
 
 **`yarn dev`** or **`yarn start`**: starts storybook server and loads stories in files that end with
 `.stories.tsx`.

@@ -1,7 +1,7 @@
 {
   "name": "@easyfeedback/utils",
   "version": "1.0.0",
-  "description": "Common utilities and types for the easyfeedback components.",
+  "description": "Common utilities and types for the RCL components.",
   "keywords": [
     "easyfeedback",
     "hooks",
