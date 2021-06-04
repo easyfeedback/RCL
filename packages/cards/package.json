@@ -1,7 +1,7 @@
 {
   "name": "@easyfeedback/cards",
   "version": "1.1.0",
-  "description": "My cards description",
+  "description": "A collection of default cards.",
   "keywords": [
     "easyfeedback"
   ],

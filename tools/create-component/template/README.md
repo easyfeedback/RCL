@@ -1,3 +1,3 @@
-# @easyfeedback/{{name}}
+# {{filename}}
 
 ⚠️ TO BE DONE!

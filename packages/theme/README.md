@@ -1,4 +1,4 @@
-# @easyfeedback/theme
+# Theme
 
 The default theme package for the easyfeedback components.
 

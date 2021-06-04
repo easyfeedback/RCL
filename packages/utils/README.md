@@ -1,4 +1,4 @@
-# @easyfeedback/utils
+# Utils
 
 Shared Vanilla TS/JS utilities for various components and packages.
 
