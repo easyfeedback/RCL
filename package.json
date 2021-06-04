@@ -28,7 +28,8 @@
     "test:watch": "yarn test --watch -u",
     "gen:theme-typings": "chakra-cli tokens packages/theme/src/index.ts",
     "changeset": "changeset",
-    "release": "yarn build && changeset publish",
+    "prerelease": "yarn build",
+    "release": "changeset publish",
     "component:add": "ts-node ./tools/create-component"
   },
   "lint-staged": {
