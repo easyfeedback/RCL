@@ -119,14 +119,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //npm.pkg.github.com/:_authToken=$GH_RELEASE_TOKEN
-          EOF
-        env:
-          GH_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Create Release Pull Request or Publish to GitHub packages
         uses: changesets/action@master
         with:
@@ -135,7 +127,7 @@ jobs:
           publish: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   build-and-deploy:
     name: Deploy Storybook
