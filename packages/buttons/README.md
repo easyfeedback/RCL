@@ -65,8 +65,8 @@ Use the `variant` prop to change the icon inside the button. You can set the val
 | Name      | Description                              | type                                   | Default |
 | --------- | ---------------------------------------- | -------------------------------------- | ------- |
 | ariaLabel | A11y: A label that describes the button. | `string`                               | -       |
-| size      | The size of the button.                  | `"sm"` `"lg"`                          | `lg`    |
-| variant   | The icon variant to render.              | `"add"` `"plane"`                      | `add`   |
+| size      | The size of the button.                  | `'sm' \| 'lg'`                         | `lg`    |
+| variant   | The icon variant to render.              | `'add' \| 'plane'`                     | `add`   |
 | onClick   | _[Optional]_                             | `MouseEventHandler<HTMLButtonElement>` | -       |
 
 ## MenuButton
@@ -97,11 +97,15 @@ const myMenuItems: [
 
 // Optional there you can change the color of the navigation icon
 <MenuButton menuItems={myMenuItems} color="red.500" />
+
+// Or the size of the icon
+<MenuButton menuItems={myMenuItems} fonSize="lg" />
 ```
 
 ### Props
 
-| Name      | Description                                              | type             | Default |
-| --------- | -------------------------------------------------------- | ---------------- | ------- |
-| menuItems | The list of menu items.                                  | `MenuListItem[]` | -       |
-| color     | _[Optional]_ The color of the `IoEllipsisVertical` icon. | `string`         | -       |
+| Name      | Description                                              | type                   | Default |
+| --------- | -------------------------------------------------------- | ---------------------- | ------- |
+| menuItems | The list of menu items.                                  | `MenuListItem[]`       | -       |
+| color     | _[Optional]_ The color of the `IoEllipsisVertical` icon. | `string`               | -       |
+| fontSize  | _[Optional]_ The size of the `IoEllipsisVertical` icon.  | `'sm' \| 'md' \| 'lg'` | `md`    |

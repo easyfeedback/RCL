@@ -1,5 +1,6 @@
 import {
   MenuButton as ChakraMenuButton,
+  ColorProps,
   Icon,
   IconButton,
   Menu,
@@ -14,9 +15,9 @@ export type MenuButtonProps = {
   /** The list of menu items. */
   menuItems: MenuListItem[]
   /** The color of the `IoEllipsisVertical` icon. */
-  color?: string
+  color?: ColorProps['color']
   /** The size of the `IoEllipsisVertical` icon. */
-  fontSize?: string
+  fontSize?: 'sm' | 'md' | 'lg'
 }
 
 /**
