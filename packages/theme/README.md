@@ -26,31 +26,22 @@ For more detailed information see the
 [Chakra Customize Theme doc](https://chakra-ui.com/docs/theming/customize-theme).
 
 ```tsx
-// 1. Import `Lato` font, `extendTheme` and `theme`
+// 1. Import `Lato` font and `theme`
 import '@fontsource/lato'
-import { extendTheme } from "@chakra-ui/react"
 import { theme } from '@easyfeedback/theme'
 
-// 2. [OPTIONAL] Call `extendTheme` and pass your custom values
-const themeOverrides = extendTheme({
-  ...theme,
-  colors: {
-    brand: {
-      100: "#f7fafc",
-      // ...
-      900: "#1a202c",
-    },
-  },
-})
+// 2. Pass the new `theme` to `ChakraProvider`
+function MyApp() {
+  return (
+    <ChakraProvider theme={theme}>
+      <App />
+    </ChakraProvider>
+  )
+}
 
-// 3. Pass the new `themeOverrides` to `ChakraProvider` (without own overrides pass simply `theme`)
-<ChakraProvider theme={extendTheme(themeOverrides)}>
-  <App />
-</ChakraProvider>
-
-// 4. Now you can use these colors in your components
+// 3. Now you can use these colors in your components
 const Usage = () => {
-  return <Box bg="brand.100">Welcome</Box>
+  return <Box fontSize="2xs">Welcome</Box>
 }
 ```
 
@@ -68,10 +59,11 @@ import { theme } from '@easyfeedback/theme'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={extendTheme(theme)}>
+    <ChakraProvider theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
   )
 }
+
 export default MyApp
 ```
