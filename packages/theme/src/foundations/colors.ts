@@ -1,4 +1,7 @@
+import { theme } from '@chakra-ui/react'
+
 export const colors = {
+  ...theme.colors,
   black: '#303540',
   gray: {
     '50': '#F6F6F6',

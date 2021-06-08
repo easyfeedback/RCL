@@ -1,6 +1,6 @@
 import '@fontsource/lato'
 
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '@easyfeedback/theme'
 import React from 'react'
 
@@ -21,7 +21,7 @@ export const parameters = {
 
 const withChakra = (StoryFn) => {
   return (
-    <ChakraProvider theme={extendTheme(theme)}>
+    <ChakraProvider theme={theme}>
       <StoryFn />
     </ChakraProvider>
   )
