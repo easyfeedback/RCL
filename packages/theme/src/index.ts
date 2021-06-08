@@ -7,6 +7,7 @@ export const theme = extendTheme(withDefaultColorScheme({ colorScheme: 'teal' })
   ...baseTheme,
   colors,
   fonts,
+  fontSizes,
   styles,
 })
 

@@ -9,12 +9,14 @@ import { FaPlane, FaPlus } from 'react-icons/fa'
 export type IconButtonProps = {
   /** A11y: A label that describes the button. */
   ariaLabel: string
+  /** The size of the button. */
+  size?: 'sm' | 'lg'
   /**
    * The icon variant to render.
    *
    * @todo Remove `plane` after another icon was added
    */
-  variant: 'add' | 'plane'
+  variant?: 'add' | 'plane'
 } & Pick<ChakraIconButtonProps, 'onClick'>
 
 /**
@@ -23,7 +25,12 @@ export type IconButtonProps = {
  * Since `IconButton` only renders an icon, you must pass the `ariaLabel` prop, so screen readers
  * can give meaning to the `button`.
  */
-export const IconButton = ({ ariaLabel, onClick, variant }: IconButtonProps) => {
+export const IconButton = ({
+  ariaLabel,
+  size = 'lg',
+  variant = 'add',
+  onClick,
+}: IconButtonProps) => {
   const [icon, setIcon] = useState<JSX.Element>()
 
   useEffect(() => {
@@ -43,8 +50,8 @@ export const IconButton = ({ ariaLabel, onClick, variant }: IconButtonProps) => 
     <ChakraIconButton
       colorScheme="teal"
       aria-label={ariaLabel}
-      size="lg"
-      fontSize="2xl"
+      size={size === 'lg' ? 'lg' : 'xs'}
+      fontSize={size === 'lg' ? '2xl' : 'xs'}
       {...(icon ? { icon: icon } : {})}
       isRound
       onClick={onClick}

@@ -1,5 +1,6 @@
 import {
   MenuButton as ChakraMenuButton,
+  ColorProps,
   Icon,
   IconButton,
   Menu,
@@ -14,7 +15,9 @@ export type MenuButtonProps = {
   /** The list of menu items. */
   menuItems: MenuListItem[]
   /** The color of the `IoEllipsisVertical` icon. */
-  color?: string
+  color?: ColorProps['color']
+  /** The size of the `IoEllipsisVertical` icon. */
+  fontSize?: 'sm' | 'md' | 'lg'
 }
 
 /**
@@ -23,7 +26,7 @@ export type MenuButtonProps = {
  *
  * This special `Menu` is set with the `IoEllipsisVertical` icon.
  */
-export const MenuButton = ({ color, menuItems }: MenuButtonProps) => {
+export const MenuButton = ({ color, fontSize = 'md', menuItems }: MenuButtonProps) => {
   return (
     <Menu>
       <ChakraMenuButton
@@ -32,6 +35,7 @@ export const MenuButton = ({ color, menuItems }: MenuButtonProps) => {
         icon={<Icon as={IoEllipsisVertical} />}
         variant="unstyled"
         color={color}
+        fontSize={fontSize}
         data-testid="MenuButton"
       />
 

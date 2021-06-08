@@ -7,13 +7,19 @@ export default {
   component: IconButton,
   args: {
     ariaLabel: 'New survey',
-    variant: 'plane',
+    size: 'lg',
+    variant: 'add',
   },
 } as Meta
 
 const Template: Story<IconButtonProps> = (args) => <IconButton {...args} />
 
 export const Default = Template.bind({})
+
+export const SmallSize = Template.bind({})
+SmallSize.args = {
+  size: 'sm',
+}
 
 export const WithClickEvent = Template.bind({})
 WithClickEvent.args = {

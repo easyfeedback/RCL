@@ -6,7 +6,7 @@ export const styles: Styles = {
       fontFamily: 'body',
       color: mode('black', 'whiteAlpha.900')(props),
       bg: mode('white', 'black')(props),
-      transition: 'background-color 0.2s',
+      transition: 'background-color 0.2s, color 0.2s',
       lineHeight: 'base',
     },
     '*::placeholder': {
