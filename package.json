@@ -25,11 +25,11 @@
     "test:ci:cov": "yarn test:ci --coverage",
     "test:cov": "yarn test --coverage",
     "test:watch": "yarn test --watch -u",
-    "gen:theme-typings": "chakra-cli tokens packages/theme/src/index.ts",
+    "gen:theme-typings": "chakra-cli tokens packages/theme",
     "changeset": "changeset",
     "prerelease": "yarn build",
     "release": "changeset publish",
-    "component:add": "ts-node ./tools/create-component"
+    "component:add": "ts-node tools/create-component"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
