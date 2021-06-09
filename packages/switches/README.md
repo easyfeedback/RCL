@@ -4,6 +4,7 @@
 
 - [Installation](#installation)
 - [Switch](#switch)
+- [ViewsSwitch](#viewsswitch)
 
 ## Installation
 
@@ -75,3 +76,30 @@ You can set the value to `sm`, `md` or `lg`.
 | id             | _[Optional]_ The id assigned to the input element.                                                                                        | `string`                     | -        |
 | labelPlacement | _[Optional]_ The position of the label.                                                                                                   | `'start' \| 'end'`           | -        |
 | size           | _[Optional]_ The size of switch.                                                                                                          | `'sm' \| 'md' \| 'lg'`       | `'md'`   |
+
+## ViewsSwitch
+
+The `Switch` component is used as an alternative for the Checkbox component. You can switch between
+enabled or disabled states.
+
+### Import component
+
+```tsx
+import { ViewsSwitch } from '@easyfeedback/switches'
+```
+
+### General usage
+
+```tsx
+<ViewsSwitch />
+
+// or
+
+<ViewsSwitch onChange={(event) => {}} />
+```
+
+### Props
+
+| Name     | Description                                                                 | type                                             | Default |
+| -------- | --------------------------------------------------------------------------- | ------------------------------------------------ | ------- |
+| onChange | _[Optional]_ Callback when the state (controlled or un-controlled) changes. | `(event: ChangeEvent<HTMLInputElement>) => void` | -       |

@@ -3,6 +3,7 @@ import { ChangeEvent } from 'react'
 import { ChakraViewsSwitch } from './ChakraViewsSwitch'
 
 export type ViewsSwitchProps = {
+  /** Callback when the state (controlled or un-controlled) changes. */
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
