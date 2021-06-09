@@ -1,8 +1,8 @@
 import { testA11y } from '@easyfeedback/test-utils'
 
-import { SimpleSwitch } from '../src/SimpleSwitch'
+import { SimpleSwitch } from '../src/Switch/SimpleSwitch'
 
-describe('Switch component', () => {
+describe('SimpleSwitch component', () => {
   it('passes a11y test', async () => {
     await testA11y(<SimpleSwitch label="myLabel" />)
   })

@@ -1,7 +1,7 @@
 import { render, testA11y } from '@easyfeedback/test-utils'
 import { toKebabCase } from '@easyfeedback/utils'
 
-import { LabelledSwitch } from '../src/LabelledSwitch'
+import { LabelledSwitch } from '../src/Switch/LabelledSwitch'
 
 describe('LabelledSwitch component', () => {
   it('passes a11y test', async () => {

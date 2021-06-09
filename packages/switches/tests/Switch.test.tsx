@@ -4,7 +4,7 @@ import { Switch } from '../src'
 
 const mockLabel = 'Mocked Switch label'
 
-describe('LabelledSwitch component', () => {
+describe('Switch component', () => {
   it('passes a11y test', async () => {
     await testA11y(<Switch label={mockLabel} />)
   })

@@ -45,8 +45,14 @@ export const ChakraViewsSwitch = forwardRef<ChakraViewsSwitchProps, 'input'>((pr
       {...getRootProps()}
       className={cx('chakra-switch', props.className)}
       __css={styleContainer}
+      data-testid="ChakraViewsSwitch"
     >
-      <input className="chakra-switch__input" {...getInputProps({}, ref)} />
+      <input
+        className="chakra-switch__input"
+        {...getInputProps({}, ref)}
+        // TODO: Add I18N to the aria-label attribute
+        aria-label="Switch the view between tiles and list"
+      />
       <chakra.span {...getCheckboxProps()} className="chakra-switch__track" __css={trackStyles}>
         <Icon as={IoGrid} w={5} h={5} __css={styleTileIcon} />
 
@@ -55,6 +61,7 @@ export const ChakraViewsSwitch = forwardRef<ChakraViewsSwitchProps, 'input'>((pr
           className="chakra-switch__thumb"
           data-checked={dataAttr(state.isChecked)}
           data-hover={dataAttr(state.isHovered)}
+          data-testid="thumb"
         >
           {/* TODO: Add I18N to the text content */}
           {state.isChecked ? 'List' : 'Tiles'}
