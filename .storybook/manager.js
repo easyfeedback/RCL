@@ -4,7 +4,7 @@ import { create } from '@storybook/theming/create'
 
 addons.setConfig({
   theme: create({
-    base: 'light',
+    base: 'dark',
     brandTitle: 'React UI Library',
     brandUrl: 'https://github.com/easyfeedback/RCL',
     brandImage: './ef-logo-short.svg?sanitize=true',
