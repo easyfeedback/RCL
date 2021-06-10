@@ -8,7 +8,16 @@ module.exports = {
     '../packages/**/stories/*.stories.mdx',
     '../packages/**/stories/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  addons: [
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        backgrounds: false,
+      },
+    },
+    '@storybook/addon-a11y',
+    '@storybook/addon-links',
+  ],
   babel: async (options) => ({
     ...options,
     plugins: [
