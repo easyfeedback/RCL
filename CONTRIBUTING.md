@@ -34,8 +34,8 @@ The following steps will get you up and running to contribute to our UI:
    cd RCL
    ```
 
-1. Setup all the dependencies and packages by running `yarn install` or simply `yarn`. This command
-   will install dependencies and bootstrap the repo using `lerna`
+1. Setup all the dependencies and packages by running `yarn install` or simply `yarn`. After this
+   run `yarn bootstrap` to bootstrap the repo using `lerna`.
 
 ## Development
 
