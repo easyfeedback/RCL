@@ -34,8 +34,8 @@ The following steps will get you up and running to contribute to our UI:
    cd RCL
    ```
 
-1. Setup all the dependencies and packages by running `yarn install` or simply `yarn`. After this
-   run `yarn bootstrap` to bootstrap the repo using `lerna`.
+1. Setup all the dependencies and packages by running `yarn install` or simply `yarn`. This command
+   will install all needed dependencies.
 
 ## Development
 
@@ -46,8 +46,6 @@ structure and we treat each component as an independent package that can be cons
 
 - [Changeset](https://github.com/atlassian/changesets) for changes documentation, changelog
   generation, and release management.
-- [Lerna](https://lerna.js.org/) to manage installation of dependencies and running various scripts.
-  We also have yarn workspaces enabled by default.
 - [Storybook](https://storybook.js.org/) for rapid UI component development and testing
 - [Testing Library](https://testing-library.com/) for testing components and hooks
 
@@ -72,22 +70,18 @@ possible.
 
 #### Package Aliasing and Yarn Workspace
 
-Since we're using lerna monorepo + yarn workspaces by default, this enables us to run commands
-within component packages directly from the root.
+Since we're using monorepo with yarn workspaces, we can run commands within component packages
+directly from the root.
 
 Each component must named this way: `@easyfeedback/[component]`. Let's say we want to build a button
 component. Here's how to do it:
 
 ```sh
 yarn workspace @easyfeedback/button build
-
-# or
-
-lerna run build --scope @easyfeedback/button
 ```
 
 **Shortcut:** To make this shorter and more convenient, we've added an alias for each component in
-the root `package.json`. Now you can simply do:
+the root `package.json`. Now you can simply do for example:
 
 ```sh
 # to build
