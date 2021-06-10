@@ -165,7 +165,6 @@ const init = async () => {
     title: 'Bootstrap dependencies by lerna',
     enabled: (ctx: { data: Answers }) => ctx.data.shouldRunBootstrap,
     task: () => {
-      execa('cd', [projectRoot])
       execa('yarn', ['bootstrap'])
     },
   })
