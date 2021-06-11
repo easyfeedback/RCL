@@ -9,6 +9,12 @@
       "options": {
         "parser": "markdown"
       }
+    },
+    {
+      "files": "*.{yaml,yml}",
+      "options": {
+        "singleQuote": false
+      }
     }
   ]
 }
