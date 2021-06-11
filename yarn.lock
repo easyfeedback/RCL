@@ -11279,17 +11279,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@easyfeedback/buttons@workspace:^1.1.1, @easyfeedback/buttons@workspace:packages/buttons":
+"@easyfeedback/buttons@workspace:packages/buttons":
   version: 0.0.0-use.local
   resolution: "@easyfeedback/buttons@workspace:packages/buttons"
   dependencies:
     "@chakra-ui/react": ^1.6.3
-    "@easyfeedback/test-utils": "workspace:^1.1.1"
-    "@easyfeedback/theme": "workspace:^1.0.1"
+    "@easyfeedback/test-utils": "workspace:tools/test-utils"
+    "@easyfeedback/theme": "workspace:packages/theme"
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.17
     react: ^17.0.2
+    react-dom: ^17.0.2
     react-icons: ^4.2.0
   peerDependencies:
     "@chakra-ui/react": ^1.6.0
@@ -11297,6 +11298,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.0
     react: ^16.13.0 || ^17.0.0
+    react-dom: ^16.13.0 || ^17.0.0
   languageName: unknown
   linkType: soft
 
@@ -11305,12 +11307,13 @@ __metadata:
   resolution: "@easyfeedback/cards@workspace:packages/cards"
   dependencies:
     "@chakra-ui/react": ^1.6.3
-    "@easyfeedback/buttons": "workspace:^1.1.1"
-    "@easyfeedback/test-utils": "workspace:^1.1.1"
+    "@easyfeedback/buttons": "workspace:packages/buttons"
+    "@easyfeedback/test-utils": "workspace:tools/test-utils"
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.17
     react: ^17.0.2
+    react-dom: ^17.0.2
     react-icons: ^4.2.0
   peerDependencies:
     "@chakra-ui/react": ^1.6.0
@@ -11318,6 +11321,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.0
     react: ^16.13.0 || ^17.0.0
+    react-dom: ^16.13.0 || ^17.0.0
   languageName: unknown
   linkType: soft
 
@@ -11326,10 +11330,12 @@ __metadata:
   resolution: "@easyfeedback/create-component@workspace:tools/create-component"
   dependencies:
     "@types/fs-extra": ^9.0.11
+    "@types/glob": ^7.1.3
     "@types/listr": ^0.14.3
     "@types/lodash": ^4.14.170
     "@types/mustache": ^4.1.1
     "@types/prompts": ^2.4.0
+    "@types/yargs": ^17.0.0
     fs-extra: ^10.0.0
     glob: ^7.1.7
     listr: ^0.14.3
@@ -11345,26 +11351,29 @@ __metadata:
   resolution: "@easyfeedback/navigations@workspace:packages/navigations"
   dependencies:
     "@chakra-ui/react": ^1.6.3
-    "@easyfeedback/buttons": "workspace:^1.1.1"
-    "@easyfeedback/test-utils": "workspace:^1.1.1"
+    "@easyfeedback/buttons": "workspace:packages/buttons"
+    "@easyfeedback/test-utils": "workspace:tools/test-utils"
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.17
     react: ^17.0.2
+    react-dom: ^17.0.2
   peerDependencies:
     "@chakra-ui/react": ^1.6.0
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.0
     react: ^16.13.0 || ^17.0.0
+    react-dom: ^16.13.0 || ^17.0.0
   languageName: unknown
   linkType: soft
 
-"@easyfeedback/test-utils@workspace:^1.1.1, @easyfeedback/test-utils@workspace:tools/test-utils":
+"@easyfeedback/test-utils@workspace:tools/test-utils":
   version: 0.0.0-use.local
   resolution: "@easyfeedback/test-utils@workspace:tools/test-utils"
   dependencies:
     "@emotion/jest": ^11.3.0
+    "@testing-library/dom": ^7.31.2
     "@testing-library/jest-dom": ^5.13.0
     "@testing-library/react": ^11.2.7
     "@testing-library/react-hooks": ^7.0.0
@@ -11372,13 +11381,15 @@ __metadata:
     "@types/jest-axe": ^3.5.1
     jest-axe: ^5.0.1
     react: ^17.0.2
+    react-dom: ^17.0.2
     react-test-renderer: ^17.0.2
   peerDependencies:
     react: ^16.13.0 || ^17.0.0
+    react-dom: ^16.13.0 || ^17.0.0
   languageName: unknown
   linkType: soft
 
-"@easyfeedback/theme@workspace:^1.0.1, @easyfeedback/theme@workspace:packages/theme":
+"@easyfeedback/theme@workspace:packages/theme":
   version: 0.0.0-use.local
   resolution: "@easyfeedback/theme@workspace:packages/theme"
   dependencies:
@@ -11387,12 +11398,14 @@ __metadata:
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.17
     react: ^17.0.2
+    react-dom: ^17.0.2
   peerDependencies:
     "@chakra-ui/react": ^1.6.0
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.0
     react: ^16.13.0 || ^17.0.0
+    react-dom: ^16.13.0 || ^17.0.0
   languageName: unknown
   linkType: soft
 
@@ -11400,7 +11413,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@easyfeedback/utils@workspace:packages/utils"
   dependencies:
-    "@easyfeedback/test-utils": "workspace:^1.1.1"
+    "@easyfeedback/test-utils": "workspace:tools/test-utils"
     react: ^17.0.2
   peerDependencies:
     react: ^16.13.0 || ^17.0.0
@@ -13285,7 +13298,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^7.28.1":
+"@testing-library/dom@npm:^7.28.1, @testing-library/dom@npm:^7.31.2":
   version: 7.31.2
   resolution: "@testing-library/dom@npm:7.31.2"
   dependencies:
@@ -13485,7 +13498,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/glob@npm:*, @types/glob@npm:^7.1.1":
+"@types/glob@npm:*, @types/glob@npm:^7.1.1, @types/glob@npm:^7.1.3":
   version: 7.1.3
   resolution: "@types/glob@npm:7.1.3"
   dependencies:
@@ -13947,6 +13960,15 @@ __metadata:
   dependencies:
     "@types/yargs-parser": "*"
   checksum: 84b8f617742b4a86f334838152cbc8d2fae4cc2568a81c4d54a9a9c7a6dc926f4fb21c3cb9d34cad895ab4f020041e28bcfe16348a34d370a2833450750ccd66
+  languageName: node
+  linkType: hard
+
+"@types/yargs@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "@types/yargs@npm:17.0.0"
+  dependencies:
+    "@types/yargs-parser": "*"
+  checksum: 92ea97fa209768b993d1a06b9f2453161fc7fc3b25211d1235d112bc960e57b180c0b8616eb10c3e89b5d1bc6add255b0b10e550165ee318560bc0531dfe13b3
   languageName: node
   linkType: hard
 
@@ -23843,13 +23865,13 @@ fsevents@^1.2.7:
   linkType: hard
 
 "postcss@npm:^7.0.14, postcss@npm:^7.0.17, postcss@npm:^7.0.2, postcss@npm:^7.0.21, postcss@npm:^7.0.26, postcss@npm:^7.0.31, postcss@npm:^7.0.32, postcss@npm:^7.0.35, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
-  version: 7.0.35
-  resolution: "postcss@npm:7.0.35"
+  version: 7.0.36
+  resolution: "postcss@npm:7.0.36"
   dependencies:
     chalk: ^2.4.2
     source-map: ^0.6.1
     supports-color: ^6.1.0
-  checksum: 8a979ea9799dd48399337708a395ddb8cf0e328515201ed35c99f5ba5eaa7688eae65764c570bf49b5be0b106226e2f222abc210de068b3d3da9a9a3bbb70567
+  checksum: 544ce0825fa998a77653e8c8bc62b3596273e0d589378b96fb575b74c6b14933a05025713aa5de8c822e9560db01a6c53d0a3fc9295374ffcb142e0fd55ded89
   languageName: node
   linkType: hard
 
@@ -23896,8 +23918,8 @@ fsevents@^1.2.7:
   linkType: hard
 
 "prettier-plugin-jsdoc@npm:^0.3.22":
-  version: 0.3.22
-  resolution: "prettier-plugin-jsdoc@npm:0.3.22"
+  version: 0.3.23
+  resolution: "prettier-plugin-jsdoc@npm:0.3.23"
   dependencies:
     binary-search-bounds: ^2.0.5
     comment-parser: ^1.1.4
@@ -23905,7 +23927,7 @@ fsevents@^1.2.7:
     mdast-util-from-markdown: ^0.8.5
   peerDependencies:
     prettier: ">=2.1.2"
-  checksum: ef46adeb94745235b4eacbac9c06daaba21d5f1a2e345d3bb6ba47406f92476bcb180a7ad4d37da5b3d42d66c198d2ee014812c8506d0e91b0550e48ad13b404
+  checksum: 418f5478a2b03f2e436b5d0561c43938022c59b0ebc48c4226504e8f0aa5ab2279fe04633fb2bbe27119b8e44f153ef2f3555b00cad9c538e9cdacd5bc28bd75
   languageName: node
   linkType: hard
 
@@ -25121,15 +25143,15 @@ fsevents@^1.2.7:
   linkType: hard
 
 "renderkid@npm:^2.0.4":
-  version: 2.0.6
-  resolution: "renderkid@npm:2.0.6"
+  version: 2.0.7
+  resolution: "renderkid@npm:2.0.7"
   dependencies:
     css-select: ^4.1.3
     dom-converter: ^0.2.0
     htmlparser2: ^6.1.0
     lodash: ^4.17.21
-    strip-ansi: ^6.0.0
-  checksum: 15017170c43979f0e0c65a7bc8fbff87bece3f18d17d9679358824d4916676bdceea776dcd77071577d18ad0cdcff056a10e959e89eb312906048bd1585a211b
+    strip-ansi: ^3.0.1
+  checksum: 7ca23ccbc95a8f85654802bc9353f0a2260f01f10bbde9384a6390e8c2add28c22c41e2d52a6375a04ba9cf41eeaa053942986734a3b25b3b7f2d3f8a9abffff
   languageName: node
   linkType: hard
 
