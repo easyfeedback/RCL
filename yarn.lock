@@ -2647,13 +2647,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@easyfeedback/buttons@workspace:packages/buttons":
+"@easyfeedback/buttons@^1.1.1, @easyfeedback/buttons@workspace:packages/buttons":
   version: 0.0.0-use.local
   resolution: "@easyfeedback/buttons@workspace:packages/buttons"
   dependencies:
     "@chakra-ui/react": ^1.6.3
-    "@easyfeedback/test-utils": "workspace:tools/test-utils"
-    "@easyfeedback/theme": "workspace:packages/theme"
+    "@easyfeedback/test-utils": "workspace:^1.1.1"
+    "@easyfeedback/theme": "workspace:^1.0.1"
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.17
@@ -2675,8 +2675,8 @@ __metadata:
   resolution: "@easyfeedback/cards@workspace:packages/cards"
   dependencies:
     "@chakra-ui/react": ^1.6.3
-    "@easyfeedback/buttons": "workspace:packages/buttons"
-    "@easyfeedback/test-utils": "workspace:tools/test-utils"
+    "@easyfeedback/buttons": ^1.1.1
+    "@easyfeedback/test-utils": "workspace:^1.1.1"
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.17
@@ -2717,8 +2717,8 @@ __metadata:
   resolution: "@easyfeedback/navigations@workspace:packages/navigations"
   dependencies:
     "@chakra-ui/react": ^1.6.3
-    "@easyfeedback/buttons": "workspace:packages/buttons"
-    "@easyfeedback/test-utils": "workspace:tools/test-utils"
+    "@easyfeedback/buttons": ^1.1.1
+    "@easyfeedback/test-utils": "workspace:^1.1.1"
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     framer-motion: ^4.1.17
@@ -2734,7 +2734,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@easyfeedback/test-utils@workspace:tools/test-utils":
+"@easyfeedback/test-utils@workspace:^1.1.1, @easyfeedback/test-utils@workspace:tools/test-utils":
   version: 0.0.0-use.local
   resolution: "@easyfeedback/test-utils@workspace:tools/test-utils"
   dependencies:
@@ -2755,7 +2755,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@easyfeedback/theme@workspace:packages/theme":
+"@easyfeedback/theme@workspace:^1.0.1, @easyfeedback/theme@workspace:packages/theme":
   version: 0.0.0-use.local
   resolution: "@easyfeedback/theme@workspace:packages/theme"
   dependencies:
@@ -2779,7 +2779,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@easyfeedback/utils@workspace:packages/utils"
   dependencies:
-    "@easyfeedback/test-utils": "workspace:tools/test-utils"
+    "@easyfeedback/test-utils": "workspace:^1.1.1"
     react: ^17.0.2
   peerDependencies:
     react: ^16.13.0 || ^17.0.0

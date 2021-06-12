@@ -44,7 +44,7 @@
     "test:watch": "yarn test --watch -u"
   },
   "devDependencies": {
-    "@easyfeedback/test-utils": "workspace:tools/test-utils",
+    "@easyfeedback/test-utils": "workspace:^1.1.1",
     "react": "^17.0.2"
   },
   "peerDependencies": {
