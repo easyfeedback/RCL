@@ -3,11 +3,16 @@
     "scope": "typescriptreact",
     "prefix": "rfc",
     "body": [
-      "export type ${TM_FILENAME_BASE}Props = {};",
+      "import { Box } from '@chakra-ui/react'",
       "",
-      "export const ${TM_FILENAME_BASE} = ({}: ${TM_FILENAME_BASE}Props) => {",
-      "  return (${0});",
-      "}"
+      "export type ${TM_FILENAME_BASE}Props = {${1}}",
+      "",
+      "export const ${TM_FILENAME_BASE} = ({ ${2} }: ${TM_FILENAME_BASE}Props) => {",
+      "  return (",
+      "    <Box data-testid=\"${TM_FILENAME_BASE}\">${0}</Box>",
+      "  )",
+      "}",
+      ""
     ],
     "description": "React functional component"
   }
