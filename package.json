@@ -9,7 +9,7 @@
   "scripts": {
     "prepare": "husky install config/husky",
     "pkg": "manypkg run",
-    "build": "yarn workspaces foreach -vpi build",
+    "build": "yarn workspaces foreach -vpi run build",
     "prebuild:storybook": "rimraf docs-build",
     "build:storybook": "build-storybook -o docs-build -s .storybook/public",
     "dev": "start-storybook -p 6006 -s .storybook/public",
