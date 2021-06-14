@@ -1,16 +1,16 @@
 import { render, testA11y } from '@easyfeedback/test-utils'
 import { IoDuplicateOutline, IoTrashBinOutline } from 'react-icons/io5'
 
-import { MenuButton } from '../src'
+import { SettingsMenuButton } from '../src'
 
 const mockMenuItems = [
   { icon: IoDuplicateOutline, title: 'Duplicate' },
   { icon: IoTrashBinOutline, title: 'Delete', color: 'red.500' },
 ]
 
-const component = <MenuButton menuItems={mockMenuItems} />
+const component = <SettingsMenuButton menuItems={mockMenuItems} />
 
-describe('MenuButton component', () => {
+describe('SettingsMenuButton component', () => {
   it('passes a11y test', async () => {
     await testA11y(component)
   })

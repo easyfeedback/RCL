@@ -1,3 +1,3 @@
 export * from './IconButton'
-export * from './MenuButton'
+export * from './SettingsMenuButton'
 export * from './models/MenuListItem'
