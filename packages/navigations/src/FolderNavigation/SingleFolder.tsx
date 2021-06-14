@@ -1,5 +1,5 @@
 import { Center, HStack, LinkBox, LinkOverlay, Spacer } from '@chakra-ui/layout'
-import { MenuButton } from '@easyfeedback/buttons'
+import { SettingsMenuButton } from '@easyfeedback/buttons'
 import { MenuListItem } from '@easyfeedback/buttons'
 import { MouseEventHandler, useEffect, useState } from 'react'
 import { IoSettings, IoTrashBinOutline } from 'react-icons/io5'
@@ -70,7 +70,7 @@ export const SingleFolder = ({ folder, onEditSettings, onDeleteFolder }: SingleF
 
         <Spacer />
 
-        <MenuButton
+        <SettingsMenuButton
           color={isShownMenuButton ? 'black' : 'transparent'}
           fontSize="lg"
           menuItems={menuItems}
