@@ -56,7 +56,7 @@ const withChakra = (StoryFn: Function, context: StoryContext) => {
   const dir = direction.toLowerCase()
   return (
     <ChakraProvider theme={{ ...theme, direction: dir }}>
-      <div dir={dir} id="story-wrapper">
+      <div dir={dir} id="story-wrapper" style={{ margin: 'auto', maxWidth: '90%' }}>
         <ColorModeToggleBar />
         <Center my="16">
           <StoryFn />
