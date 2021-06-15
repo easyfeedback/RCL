@@ -23,12 +23,12 @@ export interface TestOptions extends Omit<RenderOptions, 'wrapper'> {
    * @example
    *   ;```ts
    *   // single wrapper
-   *   render(<MyConponent />, {
+   *   render(<MyComponent />, {
    *    wrapper: MyContext
    *   });
    *
    *   // multiple wrapper
-   *   render(<MyConponent />, {
+   *   render(<MyComponent />, {
    *    wrapper: ({ children }) => (
    *      <ContextA>
    *        <ContextB>

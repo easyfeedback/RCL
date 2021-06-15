@@ -1,9 +1,9 @@
-import { render, testA11y } from '@easyfeedback/test-utils'
+import { fireEvent, render, testA11y } from '@easyfeedback/test-utils'
 import { IoDuplicateOutline, IoTrashBinOutline } from 'react-icons/io5'
 
-import { SettingsMenuButton } from '../src'
+import { MenuListItem, SettingsMenuButton } from '../src'
 
-const mockMenuItems = [
+const mockMenuItems: MenuListItem[] = [
   { icon: IoDuplicateOutline, title: 'Duplicate' },
   { icon: IoTrashBinOutline, title: 'Delete', color: 'red.500' },
 ]
@@ -16,12 +16,14 @@ describe('SettingsMenuButton component', () => {
   })
 
   it('renders the first `MenuItem` in the default color', () => {
-    const { getAllByTestId } = render(component)
+    const { getAllByTestId, getByTestId } = render(component)
+    fireEvent.click(getByTestId('SettingsMenuButton')) // the `MenuItem` are loaded lazy at click
     expect(getAllByTestId('MenuItem')[0]).toHaveStyleRule('color', 'gray.900')
   })
 
   it('not renders the second `MenuItem` in the default color', () => {
-    const { getAllByTestId } = render(component)
+    const { getAllByTestId, getByTestId } = render(component)
+    fireEvent.click(getByTestId('SettingsMenuButton')) // the `MenuItem` are loaded lazy at click
     expect(getAllByTestId('MenuItem')[1]).not.toHaveStyleRule('color', 'gray.900')
   })
 })
