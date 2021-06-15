@@ -66,3 +66,29 @@ WithCreatorAndViews.args = {
   },
   views: 123,
 }
+
+export const Limits = Template.bind({})
+Limits.args = {
+  title:
+    'Survey about something with users from the Application of state and democracy - inspirated by rainbows and flowers',
+  creator: {
+    name: 'Uwuwewewe Onyetenwewe Ugweuhem Osas',
+    imageSrc:
+      'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?fit=crop&w=64&h=64&q=60',
+  },
+  tags: [
+    'i love it',
+    'Best tag ever',
+    'IMPORTANT',
+    'test',
+    'survey',
+    'variant 1',
+    'staging',
+    'personality',
+    'europa',
+    'marketing',
+    '\\/66huz & ä#+',
+    'ß % § $',
+  ],
+  views: 12345678901234567890,
+}
