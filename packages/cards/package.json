@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "@easyfeedback/buttons": "^1.1.1",
+    "dayjs": "^1.10.5",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
