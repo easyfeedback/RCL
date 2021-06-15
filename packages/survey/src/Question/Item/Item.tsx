@@ -1,14 +1,15 @@
 import {
   Box,
-  useRadio,
-  useCheckbox,
-  UseRadioGroupReturn,
   UseCheckboxGroupReturn,
+  UseRadioGroupReturn,
+  useCheckbox,
+  useRadio,
 } from '@chakra-ui/react'
+
+import { Checkbox } from '../Item/Checkbox'
+import { Radio } from '../Item/Radio'
 import { ItemGroupProps } from '../ItemGroup'
 import { itemStyle } from './style'
-import { Radio } from '../Item/Radio'
-import { Checkbox } from '../Item/Checkbox'
 
 type ItemProps = {
   index?: number
