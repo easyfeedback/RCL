@@ -1,10 +1,11 @@
 import {
   Box,
-  useRadioGroup,
+  UseCheckboxGroupProps,
   UseRadioGroupProps,
   useCheckboxGroup,
-  UseCheckboxGroupProps,
+  useRadioGroup,
 } from '@chakra-ui/react'
+
 import { Item } from '../Item'
 import { itemGroupStyle } from './style'
 
