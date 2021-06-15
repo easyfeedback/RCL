@@ -1,0 +1,63 @@
+{
+  "name": "@easyfeedback/survey",
+  "version": "0.0.0",
+  "description": "Survey",
+  "keywords": [
+    "easyfeedback"
+  ],
+  "homepage": "https://github.com/easyfeedback/RCL#readme",
+  "bugs": {
+    "url": "https://github.com/easyfeedback/RCL/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/easyfeedback/RCL.git"
+  },
+  "license": "MIT",
+  "author": "Jury Giannelli",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "concurrently yarn:lint:*",
+    "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
+    "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
+    "lint:types": "tsc --noEmit",
+    "test": "jest --env=jsdom --passWithNoTests",
+    "test:ci": "jest --runInBand",
+    "test:ci:cov": "yarn test:ci --coverage",
+    "test:cov": "yarn test --coverage",
+    "test:watch": "yarn test --watch -u"
+  },
+  "dependencies": {
+    "@easyfeedback/test-utils": "^1.1.1"
+  },
+  "devDependencies": {
+    "@chakra-ui/react": "^1.6.3",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.17",
+    "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": "^1.6.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.0",
+    "react": "^16.13.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
