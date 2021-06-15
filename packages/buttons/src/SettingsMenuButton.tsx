@@ -11,7 +11,7 @@ import { IoEllipsisVertical } from 'react-icons/io5'
 
 import { MenuListItem } from './models/MenuListItem'
 
-export type MenuButtonProps = {
+export type SettingsMenuButtonProps = {
   /** The list of menu items. */
   menuItems: MenuListItem[]
   /** The color of the `IoEllipsisVertical` icon. */
@@ -26,7 +26,11 @@ export type MenuButtonProps = {
  *
  * This special `Menu` is set with the `IoEllipsisVertical` icon.
  */
-export const MenuButton = ({ color, fontSize = 'md', menuItems }: MenuButtonProps) => {
+export const SettingsMenuButton = ({
+  color,
+  fontSize = 'md',
+  menuItems,
+}: SettingsMenuButtonProps) => {
   return (
     <Menu>
       <ChakraMenuButton
@@ -36,7 +40,7 @@ export const MenuButton = ({ color, fontSize = 'md', menuItems }: MenuButtonProp
         variant="unstyled"
         color={color}
         fontSize={fontSize}
-        data-testid="MenuButton"
+        data-testid="SettingsMenuButton"
       />
 
       <MenuList>

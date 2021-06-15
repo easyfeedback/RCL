@@ -143,7 +143,7 @@ const init = async () => {
     title: 'Prepare copied files and add component data',
     task: (ctx: { data: Answers }) => {
       const replaceComponentString = '__COMPONENT_NAME__'
-      const replaceConfigString = '__TSCONFIG__'
+      const handlebarExtension = /\.hbs$/
       glob(ctx.data.filepath + '/**/*', (err, files) => {
         if (err) return
         files.forEach((file) => {
@@ -151,11 +151,10 @@ const init = async () => {
           const content = fs.readFileSync(file)
           const newFile = Mustache.render(content.toString(), ctx.data)
           fs.outputFileSync(file, newFile)
-          if (file.match(replaceConfigString)) {
-            fs.renameSync(file, file.replace(replaceConfigString, 'tsconfig'))
-          }
-          if (!file.match(replaceComponentString)) return
-          fs.renameSync(file, file.replace(replaceComponentString, ctx.data.filename))
+          const newFileName = file.replace(handlebarExtension, '')
+          fs.renameSync(file, newFileName)
+          if (!newFileName.match(replaceComponentString)) return
+          fs.renameSync(newFileName, newFileName.replace(replaceComponentString, ctx.data.filename))
         })
       })
     },

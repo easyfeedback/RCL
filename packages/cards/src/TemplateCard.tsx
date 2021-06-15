@@ -9,7 +9,7 @@ import {
   Text,
   theme,
 } from '@chakra-ui/react'
-import { MenuButton, MenuButtonProps } from '@easyfeedback/buttons'
+import { SettingsMenuButton, SettingsMenuButtonProps } from '@easyfeedback/buttons'
 import { IoStatsChartSharp } from 'react-icons/io5'
 
 import { StateDot, StateDotProps } from './utils/StateDot'
@@ -23,7 +23,7 @@ export type TemplateCardProps = {
   imageSrc: string
   /** The number of views. */
   views?: number
-} & Omit<MenuButtonProps, 'color'> &
+} & Omit<SettingsMenuButtonProps, 'color'> &
   StateDotProps
 
 const componentHeight = 250
@@ -64,7 +64,7 @@ export const TemplateCard = ({
       />
 
       <Box pos="absolute" top="1" title="options" right="1" zIndex={theme.zIndices.docked + 1}>
-        <MenuButton color="white" menuItems={menuItems} />
+        <SettingsMenuButton color="white" menuItems={menuItems} />
       </Box>
 
       <Box

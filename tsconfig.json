@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2017",
     "module": "ESNext",
-    "lib": ["DOM", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "declaration": true,
     "sourceMap": true,
     "moduleResolution": "Node",
@@ -23,13 +23,12 @@
     "isolatedModules": true,
     "strictPropertyInitialization": true
   },
-  "include": ["packages", "tools", "config/jest-setup.ts"],
+  "include": ["packages/**/*.{ts,tsx}", "tools/**/*.{ts,tsx}", "config/jest-setup.ts"],
   "exclude": ["node_modules", "docs-build"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",
-      "resolveJsonModule": true,
-      "noImplicitAny": false
+      "resolveJsonModule": true
     }
   }
 }

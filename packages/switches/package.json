@@ -1,20 +1,20 @@
 {
-  "name": "@easyfeedback/{{name}}",
+  "name": "@easyfeedback/switches",
   "version": "0.0.0",
-  "description": "{{description}}",
+  "description": "Switches are used as an alternative for the Checkbox component.",
   "keywords": [
     "easyfeedback"
   ],
-  "homepage": "{{{repositoryUrl}}}#readme",
+  "homepage": "https://github.com/easyfeedback/RCL#readme",
   "bugs": {
-    "url": "{{{repositoryUrl}}}/issues"
+    "url": "https://github.com/easyfeedback/RCL/issues"
   },
   "repository": {
     "type": "git",
-    "url": "{{{repositoryUrl}}}.git"
+    "url": "https://github.com/easyfeedback/RCL.git"
   },
   "license": "MIT",
-  "author": "{{author}}",
+  "author": "Alexander Böhm",
   "exports": {
     ".": {
       "require": "./dist/cjs/index.js",
@@ -41,7 +41,9 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/test-utils": "^1.1.1"
+    "@easyfeedback/test-utils": "^1.1.1",
+    "@easyfeedback/utils": "^1.0.1",
+    "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.3",

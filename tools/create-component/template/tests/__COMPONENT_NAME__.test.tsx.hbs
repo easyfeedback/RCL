@@ -9,6 +9,6 @@ describe('{{filename}} component', () => {
 
   it('renders correctly', () => {
     const { getByTestId } = render(<{{filename}} />)
-    expect(getByTestId('{{filename}}')).toBeTruthy()
+    expect(getByTestId(/{{filename}}/i)).toBeTruthy()
   })
 })
