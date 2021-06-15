@@ -1,3 +1,4 @@
+import { CSSObject } from '@chakra-ui/react'
 import { ItemGroupProps } from '../ItemGroup'
 
 type ItemGroupStyleProps = Pick<ItemGroupProps, 'direction' | 'withLabels'>
