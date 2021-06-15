@@ -11,8 +11,4 @@ export default {
 const Template: Story<{{filename}}Props> = (args) => <{{filename}} {...args} />
 
 export const Default = Template.bind({})
-
-export const WithClickEvent = Template.bind({})
-WithClickEvent.args = {
-  onClick: () => alert('Clicked!'),
-}
+Default.args = {}

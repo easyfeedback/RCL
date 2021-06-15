@@ -10,7 +10,7 @@ import {
 import { SettingsMenuButton, SettingsMenuButtonProps } from '../src/SettingsMenuButton'
 
 export default {
-  title: 'Components/Buttons/MenuButton',
+  title: 'Components/Buttons/SettingsMenuButton',
   component: SettingsMenuButton,
   args: {
     menuItems: [
