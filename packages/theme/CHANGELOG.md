@@ -1,5 +1,27 @@
 # @easyfeedback/theme
 
+## 1.1.0
+
+### Minor Changes
+
+- [#43](https://github.com/easyfeedback/RCL/pull/43)
+  [`58cb17e`](https://github.com/easyfeedback/RCL/commit/58cb17eafbf45c8d147006897ff0e4dc4b1ba974)
+  Thanks [@mheob](https://github.com/mheob)! - Add own font sizes
+
+* [#44](https://github.com/easyfeedback/RCL/pull/44)
+  [`26c050c`](https://github.com/easyfeedback/RCL/commit/26c050c0cceccf9a2a8ad278df39d2c1c6ac0f70)
+  Thanks [@mheob](https://github.com/mheob)! - Improve the exporting of the theme package
+
+### Patch Changes
+
+- [#51](https://github.com/easyfeedback/RCL/pull/51)
+  [`4f7af0d`](https://github.com/easyfeedback/RCL/commit/4f7af0d0b088424bad2883d14678c98b4272af3e)
+  Thanks [@mheob](https://github.com/mheob)! - Use Yarn 2 (without pnp for now)
+
+* [#43](https://github.com/easyfeedback/RCL/pull/43)
+  [`58cb17e`](https://github.com/easyfeedback/RCL/commit/58cb17eafbf45c8d147006897ff0e4dc4b1ba974)
+  Thanks [@mheob](https://github.com/mheob)! - Add a global css transition for color changes
+
 ## 1.0.1
 
 ### Patch Changes

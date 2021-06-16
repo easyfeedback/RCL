@@ -1,5 +1,25 @@
 # @easyfeedback/create-component
 
+## 1.0.3
+
+### Patch Changes
+
+- [#51](https://github.com/easyfeedback/RCL/pull/51)
+  [`4f7af0d`](https://github.com/easyfeedback/RCL/commit/4f7af0d0b088424bad2883d14678c98b4272af3e)
+  Thanks [@mheob](https://github.com/mheob)! - Use Yarn 2 (without pnp for now)
+
+* [#48](https://github.com/easyfeedback/RCL/pull/48)
+  [`191b013`](https://github.com/easyfeedback/RCL/commit/191b013e6a91d49eed810e698eaae4c75a59ad81)
+  Thanks [@mheob](https://github.com/mheob)! - Fix `spawn cd ENOENT` error on a ubuntu machine
+
+- [#49](https://github.com/easyfeedback/RCL/pull/49)
+  [`bf8a1ab`](https://github.com/easyfeedback/RCL/commit/bf8a1ab55e9c1745d059b7eb99fbc4ed6b33b4f9)
+  Thanks [@mheob](https://github.com/mheob)! - Use `hbs` extension for the template files of our cli
+
+* [#42](https://github.com/easyfeedback/RCL/pull/42)
+  [`e3baea4`](https://github.com/easyfeedback/RCL/commit/e3baea48b60e5a06d4ea87c954f8b019870696d4)
+  Thanks [@mheob](https://github.com/mheob)! - Update dependencies
+
 ## 1.0.2
 
 ### Patch Changes

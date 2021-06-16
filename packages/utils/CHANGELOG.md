@@ -1,5 +1,13 @@
 # @easyfeedback/utils
 
+## 1.0.2
+
+### Patch Changes
+
+- [#51](https://github.com/easyfeedback/RCL/pull/51)
+  [`4f7af0d`](https://github.com/easyfeedback/RCL/commit/4f7af0d0b088424bad2883d14678c98b4272af3e)
+  Thanks [@mheob](https://github.com/mheob)! - Use Yarn 2 (without pnp for now)
+
 ## 1.0.1
 
 ### Patch Changes

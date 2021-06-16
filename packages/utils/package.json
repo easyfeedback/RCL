@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Common utilities and types for the RCL components.",
   "keywords": [
     "easyfeedback",
@@ -44,7 +44,7 @@
     "test:watch": "yarn test --watch -u"
   },
   "devDependencies": {
-    "@easyfeedback/test-utils": "workspace:^1.1.1",
+    "@easyfeedback/test-utils": "workspace:^1.1.2",
     "react": "^17.0.2"
   },
   "peerDependencies": {
