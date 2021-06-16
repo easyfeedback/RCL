@@ -37,7 +37,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: yarn install
 
       - name: Lint types and code
         run: yarn lint
@@ -73,7 +73,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: yarn install
 
       - name: Run jest
         env:
@@ -117,13 +117,13 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: yarn install
 
       - name: Create Release Pull Request or Publish to GitHub packages
         uses: changesets/action@master
         with:
-          commit: 'Update version and deploy packages'
-          title: 'Update version and deploy packages'
+          commit: "Update version and deploy packages"
+          title: "Update version and deploy packages"
           publish: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -157,7 +157,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: yarn install
 
       - name: Build Storybook
         run: yarn build:storybook

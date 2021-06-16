@@ -16,7 +16,7 @@
     "start": "yarn dev",
     "clean": "yarn workspaces foreach -vpi exec rimraf coverage dist node_modules",
     "clean-dist": "yarn workspaces foreach -vpi exec rimraf dist",
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md,yaml,yml}' --ignore-path ./config/.prettierignore",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,yaml,yml}' --ignore-path ./config/.prettierignore",
     "lint": "yarn workspaces foreach -vpi run lint",
     "test": "jest --env=jsdom --passWithNoTests",
     "test:ci": "jest --runInBand",
