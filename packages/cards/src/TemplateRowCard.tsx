@@ -97,10 +97,6 @@ export const TemplateRowCard = ({
             )}
           </HStack>
 
-          {/*
-          // TODO: Format date
-          // TODO: Add I18N
-        */}
           <HStack spacing="14" color="gray.700" fontSize="sm" lineHeight="5">
             <Box fontWeight="bold">
               <Icon as={IoTimerOutline} w="4" h="4" />
@@ -110,6 +106,7 @@ export const TemplateRowCard = ({
             </Box>
             <Box data-testid="times">
               <Text as="span" fontWeight="black">
+                {/* TODO: Add I18N */}
                 Start:
               </Text>{' '}
               {getFormattedDate(startTime)} &ndash;{' '}
