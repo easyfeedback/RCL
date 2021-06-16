@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/switches",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Switches are used as an alternative for the Checkbox component.",
   "keywords": [
     "easyfeedback"
@@ -41,8 +41,8 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/test-utils": "^1.1.1",
-    "@easyfeedback/utils": "^1.0.1",
+    "@easyfeedback/test-utils": "^1.1.2",
+    "@easyfeedback/utils": "^1.0.2",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
