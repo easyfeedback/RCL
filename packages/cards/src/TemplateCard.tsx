@@ -1,18 +1,7 @@
-import {
-  Box,
-  HStack,
-  Heading,
-  Icon,
-  Image,
-  LinkBox,
-  LinkOverlay,
-  Text,
-  theme,
-} from '@chakra-ui/react'
-import { MenuButton, MenuButtonProps } from '@easyfeedback/buttons'
-import { IoStatsChartSharp } from 'react-icons/io5'
+import { Box, HStack, Heading, Image, LinkBox, LinkOverlay, Text, theme } from '@chakra-ui/react'
+import { SettingsMenuButton, SettingsMenuButtonProps } from '@easyfeedback/buttons'
 
-import { StateDot, StateDotProps } from './utils/StateDot'
+import { StateDot, StateDotProps, ViewsStats, ViewsStatsProps } from './utils'
 
 export type TemplateCardProps = {
   /** The hyperlink to the template. */
@@ -21,10 +10,9 @@ export type TemplateCardProps = {
   title: string
   /** The image src attribute. */
   imageSrc: string
-  /** The number of views. */
-  views?: number
-} & Omit<MenuButtonProps, 'color'> &
-  StateDotProps
+} & Pick<SettingsMenuButtonProps, 'menuItems'> &
+  StateDotProps &
+  Pick<ViewsStatsProps, 'views'>
 
 const componentHeight = 250
 const infoBoxHeight = 48
@@ -64,7 +52,7 @@ export const TemplateCard = ({
       />
 
       <Box pos="absolute" top="1" title="options" right="1" zIndex={theme.zIndices.docked + 1}>
-        <MenuButton color="white" menuItems={menuItems} />
+        <SettingsMenuButton color="white" menuItems={menuItems} />
       </Box>
 
       <Box
@@ -85,6 +73,7 @@ export const TemplateCard = ({
 
       <HStack
         bgColor="white"
+        color="gray.700"
         height={`${infoBoxHeight}px`}
         justifyContent="space-between"
         px="4"
@@ -92,21 +81,7 @@ export const TemplateCard = ({
       >
         <StateDot state={state} />
 
-        {views && (
-          <HStack color="gray.700" data-testid="views">
-            <Text
-              as="span"
-              zIndex="docked"
-              title={`${views}`}
-              fontSize="sm"
-              isTruncated
-              maxWidth={145}
-            >
-              {views}
-            </Text>
-            <Icon as={IoStatsChartSharp} title="survey stats" zIndex="docked" w="3" h="3" />
-          </HStack>
-        )}
+        {views && <ViewsStats views={views} fontSize="sm" iconSize="3" />}
       </HStack>
     </LinkBox>
   )

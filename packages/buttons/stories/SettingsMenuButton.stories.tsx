@@ -7,11 +7,11 @@ import {
   IoTrashBinOutline,
 } from 'react-icons/io5'
 
-import { MenuButton, MenuButtonProps } from '../src/MenuButton'
+import { SettingsMenuButton, SettingsMenuButtonProps } from '../src/SettingsMenuButton'
 
 export default {
-  title: 'Components/Buttons/MenuButton',
-  component: MenuButton,
+  title: 'Components/Buttons/SettingsMenuButton',
+  component: SettingsMenuButton,
   args: {
     menuItems: [
       { icon: IoDuplicateOutline, title: 'Duplicate' },
@@ -23,6 +23,6 @@ export default {
   },
 } as Meta
 
-const Template: Story<MenuButtonProps> = (args) => <MenuButton {...args} />
+const Template: Story<SettingsMenuButtonProps> = (args) => <SettingsMenuButton {...args} />
 
 export const Default = Template.bind({})

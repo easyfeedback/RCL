@@ -1,7 +1,7 @@
 {
-  "name": "@easyfeedback/cards",
-  "version": "1.1.1",
-  "description": "A collection of default cards.",
+  "name": "@easyfeedback/switches",
+  "version": "0.0.0",
+  "description": "Switches are used as an alternative for the Checkbox component.",
   "keywords": [
     "easyfeedback"
   ],
@@ -30,7 +30,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "lint": "concurrently -n js,style,types 'yarn lint:js' 'yarn lint:style' 'yarn lint:types'",
+    "lint": "concurrently yarn:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
     "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
     "lint:types": "tsc --noEmit",
@@ -41,26 +41,23 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/buttons": "^1.1.1",
-    "dayjs": "^1.10.5",
+    "@easyfeedback/test-utils": "^1.1.1",
+    "@easyfeedback/utils": "^1.0.1",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.3",
-    "@easyfeedback/test-utils": "workspace:^1.1.1",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^17.0.2"
   },
   "peerDependencies": {
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.0",
-    "react": "^16.13.0 || ^17.0.0",
-    "react-dom": "^16.13.0 || ^17.0.0"
+    "react": "^16.13.0 || ^17.0.0"
   },
   "publishConfig": {
     "access": "public"

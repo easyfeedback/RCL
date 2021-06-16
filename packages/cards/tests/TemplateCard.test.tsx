@@ -21,11 +21,11 @@ describe('TemplateCard component', () => {
 
   it('renders without the views section', () => {
     const { queryByTestId } = render(<TemplateCard {...mockDefaultProps} />)
-    expect(queryByTestId('views')).not.toBeInTheDocument()
+    expect(queryByTestId('ViewsStats')).not.toBeInTheDocument()
   })
 
   it('renders with the views section', () => {
     const { getByTestId } = render(<TemplateCard {...mockDefaultProps} views={213} />)
-    expect(getByTestId('views').firstChild).toContainHTML('213')
+    expect(getByTestId('ViewsStats').firstChild).toContainHTML('213')
   })
 })
