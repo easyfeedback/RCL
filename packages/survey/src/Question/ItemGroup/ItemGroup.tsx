@@ -6,25 +6,19 @@ import {
   useRadioGroup,
 } from '@chakra-ui/react'
 
-import { Item } from '../Item'
+import { Radio, Checkbox, ItemProps, OptionObj } from '../Item'
 import { itemGroupStyle } from './style'
 
-type OptionObj = {
-  value: string
-  label: string
-}
-
 export type ItemGroupProps = {
-  type: 'checkbox' | 'radio'
-  activeColor?: string
+  itemType: 'checkbox' | 'radio'
   options: OptionObj[]
   direction?: 'vertical' | 'horizontal'
-  withLabels: boolean
-} & Pick<UseRadioGroupProps, 'name' | 'defaultValue' | 'onChange'> &
+} & Pick<ItemProps, 'activeColor' | 'withLabels'> &
+  Pick<UseRadioGroupProps, 'name' | 'defaultValue' | 'onChange'> &
   Pick<UseCheckboxGroupProps, 'defaultValue' | 'onChange'>
 
 export const ItemGroup = (props: ItemGroupProps) => {
-  const { type } = props
+  const { itemType } = props
   const defaultProps = {
     defaultValue: props.defaultValue,
     onChange: props.onChange,
@@ -37,23 +31,23 @@ export const ItemGroup = (props: ItemGroupProps) => {
   const { getCheckboxProps } = useCheckboxGroup(defaultProps)
 
   const groupStyle = itemGroupStyle(props)
-  const rootProps = type === 'radio' ? getRootProps() : {}
+  const rootProps = itemType === 'radio' ? getRootProps() : {}
 
   return (
     <Box data-testid="ItemGroup" {...rootProps} __css={groupStyle}>
-      {props.options.map(({ value, label }, i) => {
-        const itemProps = type === 'radio' ? getRadioProps({ value }) : getCheckboxProps({ value })
+      {props.options.map(({ value, label }) => {
+        const itemProps = {
+          key: value,
+          value,
+          label,
+          withLabels: props.withLabels,
+          activeColor: props.activeColor,
+        }
 
-        return (
-          <Item
-            key={value}
-            index={i}
-            type={type}
-            label={label}
-            withLabels={props.withLabels}
-            activeColor={props.activeColor}
-            {...itemProps}
-          />
+        return itemType === 'radio' ? (
+          <Radio {...getRadioProps({ value })} {...itemProps} />
+        ) : (
+          <Checkbox {...getCheckboxProps({ value })} {...itemProps} />
         )
       })}
     </Box>
