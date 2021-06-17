@@ -105,9 +105,6 @@
     "tslib": "^2.3.0",
     "typescript": "~4.2.4"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "importSort": {
     ".js, .jsx, .es6, .es": {
       "parser": "babylon",
