@@ -1,5 +1,17 @@
 # @easyfeedback/cards
 
+## 1.2.1
+
+### Patch Changes
+
+- [#59](https://github.com/easyfeedback/RCL/pull/59)
+  [`e0d300c`](https://github.com/easyfeedback/RCL/commit/e0d300c6a06d172f63081a7f25b00fec77135272)
+  Thanks [@mheob](https://github.com/mheob)! - Fix yarn workspace version at publishing
+
+- Updated dependencies
+  [[`e0d300c`](https://github.com/easyfeedback/RCL/commit/e0d300c6a06d172f63081a7f25b00fec77135272)]:
+  - @easyfeedback/buttons@1.2.1
+
 ## 1.2.0
 
 ### Minor Changes
