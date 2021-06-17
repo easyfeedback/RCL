@@ -12,7 +12,7 @@ export default {
   },
   args: {
     name: 'my_items_group',
-    type: 'radio',
+    itemType: 'radio',
     options: [
       {
         value: 'value_1',
@@ -40,6 +40,31 @@ export const Default = Template.bind({})
 export const WithOnChangeEvent = Template.bind({})
 WithOnChangeEvent.args = {
   onChange: (val) => alert(val + ' selected'),
+}
+
+export const RadioWithDefaultValue = Template.bind({})
+RadioWithDefaultValue.args = {
+  defaultValue: 'value_2',
+}
+
+export const CheckboxesWithDefaultValue = Template.bind({})
+CheckboxesWithDefaultValue.args = {
+  itemType: 'checkbox',
+  defaultValue: ['value_2', 'value_3'],
+}
+
+export const HorizontalRadios = Template.bind({})
+HorizontalRadios.args = {
+  itemType: 'radio',
+  direction: 'horizontal',
+  withLabels: false,
+}
+
+export const HorizontalCheckboxes = Template.bind({})
+HorizontalCheckboxes.args = {
+  itemType: 'checkbox',
+  direction: 'horizontal',
+  withLabels: false,
 }
 
 export const Limits = Template.bind({})
