@@ -1,5 +1,17 @@
 # @easyfeedback/navigations
 
+## 1.0.2
+
+### Patch Changes
+
+- [#61](https://github.com/easyfeedback/RCL/pull/61)
+  [`fdc7637`](https://github.com/easyfeedback/RCL/commit/fdc763772c1dffce894ad639ed04b516948d2f9b)
+  Thanks [@mheob](https://github.com/mheob)! - Fix the files which should be outputted at publish
+
+- Updated dependencies
+  [[`fdc7637`](https://github.com/easyfeedback/RCL/commit/fdc763772c1dffce894ad639ed04b516948d2f9b)]:
+  - @easyfeedback/buttons@1.2.2
+
 ## 1.0.1
 
 ### Patch Changes
