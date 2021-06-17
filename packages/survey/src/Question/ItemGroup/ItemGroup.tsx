@@ -35,11 +35,12 @@ export const ItemGroup = (props: ItemGroupProps) => {
 
   return (
     <Box data-testid="ItemGroup" {...rootProps} __css={groupStyle}>
-      {props.options.map(({ value, label }) => {
+      {props.options.map(({ value, label, imageSrc }) => {
         const itemProps = {
           key: value,
           value,
           label,
+          imageSrc,
           withLabels: props.withLabels,
           activeColor: props.activeColor,
         }
