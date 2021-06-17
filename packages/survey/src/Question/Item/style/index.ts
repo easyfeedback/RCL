@@ -1,26 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useColorModeValue, CSSObject } from '@chakra-ui/react'
-import Color from 'color'
-import { lightenAbs, darkenAbs } from '@easyfeedback/utils/src/color-ext'
+import { useColorModeValue, CSSObject, useTheme } from '@chakra-ui/react'
+import { isDark, lighten, darken, transparentize } from '@chakra-ui/theme-tools'
+import { ItemProps } from '../models/ItemProps'
 
-type ItemStyleProps = {
-  isChecked: boolean
-  activeColor?: string
-}
+export const itemStyle = ({ isChecked, activeColor }: ItemProps): CSSObject => {
+  const theme = useTheme()
+  const bgColor = useColorModeValue(
+    transparentize('black', 0.12)(theme),
+    transparentize('white', 0.29)(theme)
+  )
+  const hoverColor = useColorModeValue(
+    transparentize('black', 0.25)(theme),
+    transparentize('white', 0.22)(theme)
+  )
+  const hoverActiveColor = isDark(activeColor)(theme)
+    ? darken(activeColor, 0.05)(theme)
+    : lighten(activeColor, 0.05)(theme)
 
-export const itemStyle = ({ isChecked, activeColor }: ItemStyleProps): CSSObject => {
-  const Black = Color('black')
-  const White = Color('white')
-  const ActiveColor = Color(activeColor)
-
-  const BgColor: Color = useColorModeValue(Black.alpha(0.12), White.alpha(0.29))
-  const HoverColor: Color = useColorModeValue(Black.alpha(0.25), White.alpha(0.22))
-  const HoverActiveColor = ActiveColor.isDark()
-    ? lightenAbs(ActiveColor, 0.05)
-    : darkenAbs(ActiveColor, 0.05)
-
-  const TextColor = useColorModeValue(Black, White)
-  const TextColorActive = ActiveColor.isLight() ? Black : White
+  const textColor = useColorModeValue('black', 'white')
+  const textColorActive = isDark(activeColor)(theme) ? 'white' : 'black'
 
   return {
     display: 'flex',
@@ -32,11 +30,11 @@ export const itemStyle = ({ isChecked, activeColor }: ItemStyleProps): CSSObject
       padding: '4',
       display: 'flex',
       alignItems: 'center',
-      backgroundColor: isChecked ? ActiveColor.toString() : BgColor.toString(),
-      color: isChecked ? TextColorActive.toString() : TextColor.toString(),
+      backgroundColor: isChecked ? activeColor : bgColor,
+      color: isChecked ? textColorActive : textColor,
     },
     '&:hover > div': {
-      backgroundColor: isChecked ? HoverActiveColor.toString() : HoverColor.toString(),
+      backgroundColor: isChecked ? hoverActiveColor : hoverColor,
     },
   }
 }
