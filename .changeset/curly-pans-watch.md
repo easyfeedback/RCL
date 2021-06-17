@@ -9,4 +9,4 @@
 '@easyfeedback/create-component': patch
 ---
 
-Fix yarn workspace version at publishing
+Fix the files which should be outputted at publish
