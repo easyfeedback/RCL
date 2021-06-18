@@ -1,5 +1,13 @@
 # @easyfeedback/utils
 
+## 1.0.4
+
+### Patch Changes
+
+- [#63](https://github.com/easyfeedback/RCL/pull/63)
+  [`21a62d6`](https://github.com/easyfeedback/RCL/commit/21a62d64977c7efa518df17afb23dfd8da27d42f)
+  Thanks [@mheob](https://github.com/mheob)! - Fix the files which should be outputted at publish
+
 ## 1.0.3
 
 ### Patch Changes
