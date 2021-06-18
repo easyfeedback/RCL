@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/navigations",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A collection of default navigations.",
   "keywords": [
     "easyfeedback"
@@ -34,11 +34,11 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/buttons": "^1.2.2"
+    "@easyfeedback/buttons": "^1.2.3"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.3",
-    "@easyfeedback/test-utils": "^1.1.4",
+    "@easyfeedback/test-utils": "^1.1.5",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",

@@ -1,5 +1,17 @@
 # @easyfeedback/navigations
 
+## 1.0.3
+
+### Patch Changes
+
+- [#65](https://github.com/easyfeedback/RCL/pull/65)
+  [`95959d8`](https://github.com/easyfeedback/RCL/commit/95959d8d8fa9edcfdba2d68fc3b511033248a59a)
+  Thanks [@mheob](https://github.com/mheob)! - Downgrade to Yarn 1
+
+- Updated dependencies
+  [[`95959d8`](https://github.com/easyfeedback/RCL/commit/95959d8d8fa9edcfdba2d68fc3b511033248a59a)]:
+  - @easyfeedback/buttons@1.2.3
+
 ## 1.0.2
 
 ### Patch Changes
