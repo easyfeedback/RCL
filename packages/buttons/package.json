@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/buttons",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A collection of default buttons.",
   "keywords": [
     "easyfeedback"
@@ -34,12 +34,12 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/theme": "^1.1.2",
+    "@easyfeedback/theme": "^1.1.3",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.3",
-    "@easyfeedback/test-utils": "^1.1.4",
+    "@easyfeedback/test-utils": "^1.1.5",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
