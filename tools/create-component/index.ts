@@ -2,6 +2,7 @@
 
 import { join } from 'path'
 
+import execa from 'execa'
 import fs from 'fs-extra'
 import glob from 'glob'
 import Listr from 'listr'
@@ -56,6 +57,7 @@ type Answers = {
   name: string
   description: string
   filepath: string
+  shouldRunBootstrap: boolean
   author: string
   filename: string
   repositoryUrl: string
@@ -92,6 +94,14 @@ const getPrompts: () => Promise<Answers> = async () => {
         message: 'Package location',
         initial: argv.filepath,
       },
+      {
+        type: 'toggle',
+        name: 'shouldRunBootstrap',
+        message: 'Do you want bootstrap the repository with lerna?',
+        initial: true,
+        active: 'yes',
+        inactive: 'no',
+      },
     ],
     {
       onCancel: () => {
@@ -105,6 +115,7 @@ const getPrompts: () => Promise<Answers> = async () => {
     name: _.kebabCase(response.name),
     description: response.description,
     filepath: `${response.filepath || argv.filepath}/${_.kebabCase(response.name)}`,
+    shouldRunBootstrap: response.shouldRunBootstrap,
     author: app.author,
     filename: _.upperFirst(_.camelCase(response.name)),
     repositoryUrl: app.repoUrl,
@@ -147,6 +158,14 @@ const init = async () => {
           fs.renameSync(newFileName, newFileName.replace(replaceComponentString, ctx.data.filename))
         })
       })
+    },
+  })
+
+  progress.add({
+    title: 'Bootstrap dependencies by lerna',
+    enabled: (ctx: { data: Answers }) => ctx.data.shouldRunBootstrap,
+    task: () => {
+      execa('yarn', ['bootstrap'])
     },
   })
 
