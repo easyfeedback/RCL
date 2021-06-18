@@ -32,7 +32,7 @@ export const SettingsMenuButton = ({
   menuItems,
 }: SettingsMenuButtonProps) => {
   return (
-    <Menu>
+    <Menu isLazy>
       <ChakraMenuButton
         as={IconButton}
         aria-label="Options"

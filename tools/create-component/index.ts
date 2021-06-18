@@ -88,6 +88,7 @@ const getPrompts: () => Promise<Answers> = async () => {
         inactive: 'no',
       },
       {
+        // @ts-ignore ts(2322)
         type: (prev) => (prev ? null : 'text'),
         name: 'filepath',
         message: 'Package location',

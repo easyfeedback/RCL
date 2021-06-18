@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/test-utils",
-  "version": "1.1.1",
+  "version": "1.1.5",
   "description": "Testing utilities for the RCL components.",
   "keywords": [
     "easyfeedback",
@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "@emotion/jest": "^11.3.0",
-    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/dom": "^7.31.2",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/react-hooks": "^7.0.0",
     "@testing-library/user-event": "^13.1.9",
@@ -40,10 +41,12 @@
     "react-test-renderer": "^17.0.2"
   },
   "devDependencies": {
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
-    "react": "^16.13.0 || ^17.0.0"
+    "react": "^16.13.0 || ^17.0.0",
+    "react-dom": "^16.13.0 || ^17.0.0"
   },
   "publishConfig": {
     "access": "public"
