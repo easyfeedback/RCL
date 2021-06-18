@@ -3,7 +3,7 @@ import { useColorModeValue, CSSObject, useTheme } from '@chakra-ui/react'
 import { isDark, lighten, darken, transparentize } from '@chakra-ui/theme-tools'
 import { ItemProps } from '../models/ItemProps'
 
-export const itemStyle = ({ isChecked, activeColor, imageSrc }: ItemProps): CSSObject => {
+export const itemStyle = ({ isChecked, activeColor, withImages }: ItemProps): CSSObject => {
   const theme = useTheme()
   const bgColor = useColorModeValue(
     transparentize('black', 0.12)(theme),
@@ -29,8 +29,8 @@ export const itemStyle = ({ isChecked, activeColor, imageSrc }: ItemProps): CSSO
       borderRadius: 'md',
       padding: '4',
       display: 'flex',
-      flexDirection: imageSrc ? 'column' : 'initial',
-      alignItems: imageSrc ? 'normal' : 'center',
+      flexDirection: withImages ? 'column' : 'initial',
+      alignItems: withImages ? 'normal' : 'center',
       backgroundColor: isChecked ? activeColor : bgColor,
       color: isChecked ? textColorActive : textColor,
       '> div > p': {
@@ -39,7 +39,7 @@ export const itemStyle = ({ isChecked, activeColor, imageSrc }: ItemProps): CSSO
       '> img': {
         marginBottom: '2',
         flexGrow: 2,
-        objectFit: 'cover',
+        objectFit: 'scale-down',
       },
     },
     '&:hover > div': {

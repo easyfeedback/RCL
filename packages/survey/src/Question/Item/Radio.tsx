@@ -19,13 +19,13 @@ export const Radio = (props: ItemProps) => {
     <Box as="label" id={label_uid} {...label} __css={_itemStyle}>
       <input {...input} aria-label={props.label} aria-labelledby={label_uid} />
       <Box {...checkbox}>
-        {props.imageSrc && <Image src={props.imageSrc} alt={props.label} />}
-        <Box display={'flex'}>
+        {props.withImages && <Image src={props.imageSrc} alt={props.label} />}
+        <Box display={'flex'} alignItems={'flex-end'}>
           <Icon as={props.isChecked ? IoEllipse : IoRadioButtonOff} display="block" />
-          {props.withLabels && props.imageSrc && <Text>{props.label}</Text>}
+          {props.withLabels && props.withImages && <Text>{props.label}</Text>}
         </Box>
       </Box>
-      {props.withLabels && !props.imageSrc && (
+      {props.withLabels && !props.withImages && (
         <Box {...checkbox} marginLeft={1} flexGrow={1}>
           <Text>{props.label}</Text>
         </Box>
