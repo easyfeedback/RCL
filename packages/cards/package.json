@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "lint": "concurrently -n js,style,types 'yarn lint:js' 'yarn lint:style' 'yarn lint:types'",
+    "lint": "concurrently yarn:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
     "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
     "lint:types": "tsc --noEmit",
@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.3",
-    "@easyfeedback/test-utils": "workspace:^1.1.4",
+    "@easyfeedback/test-utils": "^1.1.4",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
