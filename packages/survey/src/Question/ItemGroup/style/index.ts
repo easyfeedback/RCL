@@ -1,13 +1,13 @@
 import { CSSObject } from '@chakra-ui/react'
 
-import { ItemGroupProps } from '../ItemGroup'
+import { ItemGroupProps } from '../'
 
-type ItemGroupStyleProps = Pick<ItemGroupProps, 'direction' | 'withLabels'>
-
-export const itemGroupStyle = ({ direction }: ItemGroupStyleProps): CSSObject => {
+export const itemGroupStyle = ({ direction, maxColumns }: ItemGroupProps): CSSObject => {
   return {
-    display: 'flex',
-    flexDirection: direction === 'vertical' ? 'column' : 'row',
-    '>:not(:last-child)': direction === 'vertical' ? { marginBottom: '1' } : { marginRight: '1' },
+    display: maxColumns ? 'grid' : 'flex',
+    gridAutoFlow: 'row',
+    gridTemplateColumns: `repeat(${maxColumns}, 1fr)`,
+    gridGap: '1',
+    flexDirection: !maxColumns && direction === 'vertical' ? 'column' : 'row',
   }
 }

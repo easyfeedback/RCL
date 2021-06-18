@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
+import { FaTruckMonster } from 'react-icons/fa'
 
 import { ItemGroup, ItemGroupProps } from '../src/Question/ItemGroup'
 
@@ -114,6 +115,9 @@ Limits.args = {
 
 export const LimitsWithImages = Template.bind({})
 LimitsWithImages.args = {
+  maxColumns: 3,
+  direction: 'horizontal',
+  withImages: true,
   options: [
     {
       value: 'fox_dog',
@@ -130,6 +134,7 @@ LimitsWithImages.args = {
     },
     {
       value: 'value_3',
+      imageSrc: '',
       label: 'Value 3',
     },
     {

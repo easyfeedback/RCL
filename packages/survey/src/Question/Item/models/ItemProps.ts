@@ -1,5 +1,3 @@
-import { ReactNode } from 'react'
-
 export type OptionObj = {
   /* the value */
   value: string
@@ -16,6 +14,6 @@ export type ItemProps = {
   isChecked?: boolean
   /* show or hide labels */
   withLabels: boolean
-  /* nodes to add inside normal item */
-  children?: ReactNode
+  /* show or hide images */
+  withImages: boolean
 } & Pick<OptionObj, 'value' | 'label' | 'imageSrc'>
