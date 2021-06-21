@@ -8,6 +8,8 @@ export type OptionObj = {
 }
 
 export type ItemProps = {
+  /* which type we should use */
+  itemType: 'checkbox' | 'radio'
   /* the color used when checked is true */
   activeColor: string
   /* chakra controlled value */

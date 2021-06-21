@@ -1,12 +1,13 @@
-import { Box, Image, Icon, Text, useCheckbox } from '@chakra-ui/react'
+import { Box, Image, Icon, Text, useRadio, useCheckbox } from '@chakra-ui/react'
 import { FaCheck } from 'react-icons/fa'
-import { IoSquareOutline } from 'react-icons/io5'
-import { ItemProps } from './'
+import { IoSquareOutline, IoEllipse, IoRadioButtonOff } from 'react-icons/io5'
+import { ItemProps } from '.'
 import { itemStyle } from './style'
 import { v1 as uuid } from 'uuid'
 
-export const Checkbox = (props: ItemProps) => {
-  const { getInputProps, getLabelProps, getCheckboxProps } = useCheckbox(props)
+export const Item = (props: ItemProps) => {
+  const { getInputProps, getLabelProps, getCheckboxProps } =
+    props.itemType === 'radio' ? useRadio(props) : useCheckbox(props)
 
   const input = getInputProps()
   const label = getLabelProps()
@@ -22,7 +23,11 @@ export const Checkbox = (props: ItemProps) => {
       <Box {...checkbox}>
         {props.withImages && <Image src={props.imageSrc} alt={props.label} />}
         <Box display={'flex'} alignItems={'flex-end'}>
-          <Icon as={props.isChecked ? FaCheck : IoSquareOutline} display="block" />
+          {props.itemType === 'radio' ? (
+            <Icon as={props.isChecked ? IoEllipse : IoRadioButtonOff} display="block" />
+          ) : (
+            <Icon as={props.isChecked ? FaCheck : IoSquareOutline} display="block" />
+          )}
           {props.withLabels && props.withImages && <Text>{props.label}</Text>}
         </Box>
       </Box>
