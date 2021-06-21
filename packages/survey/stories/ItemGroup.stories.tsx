@@ -1,5 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
-import { FaTruckMonster } from 'react-icons/fa'
 
 import { ItemGroup, ItemGroupProps } from '../src/Question/ItemGroup'
 

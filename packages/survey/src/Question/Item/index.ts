@@ -1,3 +1,2 @@
-export * from './Radio'
-export * from './Checkbox'
+export * from './Item'
 export * from './models/ItemProps'

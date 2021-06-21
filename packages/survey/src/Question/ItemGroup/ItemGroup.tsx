@@ -1,6 +1,6 @@
 import { Box, useCheckboxGroup, useRadioGroup } from '@chakra-ui/react'
 
-import { Radio, Checkbox } from '../Item'
+import { Item } from '../Item'
 import { ItemProps, OptionObj } from '../Item/models/ItemProps'
 import { ItemGroupProps } from './'
 import { itemGroupStyle } from './style'
@@ -24,20 +24,20 @@ export const ItemGroup = (props: ItemGroupProps) => {
   return (
     <Box data-testid="ItemGroup" {...rootProps} __css={groupStyle}>
       {props.options.map(({ value, label, imageSrc }: OptionObj) => {
+        const htmlProps =
+          itemType === 'radio' ? getRadioProps({ value }) : getCheckboxProps({ value })
+
         const itemProps: ItemProps = {
           value,
           label,
           imageSrc,
+          itemType: props.itemType,
           withLabels: props.withLabels,
           withImages: props.withImages,
           activeColor: props.activeColor,
         }
 
-        return itemType === 'radio' ? (
-          <Radio key={value} {...getRadioProps({ value })} {...itemProps} />
-        ) : (
-          <Checkbox key={value} {...getCheckboxProps({ value })} {...itemProps} />
-        )
+        return <Item key={value} {...htmlProps} {...itemProps} />
       })}
     </Box>
   )
