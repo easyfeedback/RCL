@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/test-utils",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Testing utilities for the RCL components.",
   "keywords": [
     "easyfeedback",
@@ -8,7 +8,7 @@
     "react",
     "utilities"
   ],
-  "homepage": "https://github.com/easyfeedback/RCL#readme",
+  "homepage": "https://github.com/easyfeedback/RCL/tree/main/tools/test-utils#readme",
   "bugs": {
     "url": "https://github.com/easyfeedback/RCL/issues"
   },
@@ -26,7 +26,6 @@
   "scripts": {
     "lint": "concurrently yarn:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
-    "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
     "lint:types": "tsc --noEmit"
   },
   "dependencies": {

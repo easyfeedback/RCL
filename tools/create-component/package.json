@@ -1,9 +1,9 @@
 {
   "name": "@easyfeedback/create-component",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "description": "Tool to create a new component.",
-  "homepage": "https://github.com/easyfeedback/RCL#readme",
+  "homepage": "https://github.com/easyfeedback/RCL/tree/main/tools/create-component#readme",
   "bugs": {
     "url": "https://github.com/easyfeedback/RCL/issues"
   },
@@ -17,7 +17,6 @@
   "scripts": {
     "lint": "concurrently yarn:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
-    "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
     "lint:types": "tsc --noEmit"
   },
   "dependencies": {
