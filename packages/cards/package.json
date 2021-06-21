@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/cards",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A collection of default cards.",
   "keywords": [
     "easyfeedback"
@@ -42,13 +42,13 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/buttons": "^1.2.4",
+    "@easyfeedback/buttons": "^1.2.5",
     "dayjs": "^1.10.5",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.4",
-    "@easyfeedback/test-utils": "^1.1.6",
+    "@easyfeedback/test-utils": "^1.1.7",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
