@@ -1,5 +1,13 @@
 # @easyfeedback/create-component
 
+## 1.0.8
+
+### Patch Changes
+
+- [#72](https://github.com/easyfeedback/RCL/pull/72)
+  [`efb59f7`](https://github.com/easyfeedback/RCL/commit/efb59f7619096cdccf3bc7387586d41e0616abb9)
+  Thanks [@mheob](https://github.com/mheob)! - Fix build error
+
 ## 1.0.7
 
 ### Patch Changes

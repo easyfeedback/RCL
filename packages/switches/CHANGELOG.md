@@ -1,5 +1,18 @@
 # @easyfeedback/switches
 
+## 1.0.5
+
+### Patch Changes
+
+- [#72](https://github.com/easyfeedback/RCL/pull/72)
+  [`efb59f7`](https://github.com/easyfeedback/RCL/commit/efb59f7619096cdccf3bc7387586d41e0616abb9)
+  Thanks [@mheob](https://github.com/mheob)! - Fix build error
+
+- Updated dependencies
+  [[`efb59f7`](https://github.com/easyfeedback/RCL/commit/efb59f7619096cdccf3bc7387586d41e0616abb9)]:
+  - @easyfeedback/utils@1.0.7
+  - @easyfeedback/test-utils@1.1.7
+
 ## 1.0.4
 
 ### Patch Changes
