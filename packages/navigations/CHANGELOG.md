@@ -1,5 +1,17 @@
 # @easyfeedback/navigations
 
+## 1.0.4
+
+### Patch Changes
+
+- [#68](https://github.com/easyfeedback/RCL/pull/68)
+  [`01e3550`](https://github.com/easyfeedback/RCL/commit/01e3550b2420cae8759a42591ae2e8f127c0559e)
+  Thanks [@mheob](https://github.com/mheob)! - Use babel for the build project
+
+- Updated dependencies
+  [[`01e3550`](https://github.com/easyfeedback/RCL/commit/01e3550b2420cae8759a42591ae2e8f127c0559e)]:
+  - @easyfeedback/buttons@1.2.4
+
 ## 1.0.3
 
 ### Patch Changes
