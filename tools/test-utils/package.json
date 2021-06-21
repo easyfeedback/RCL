@@ -29,8 +29,6 @@
     "lint:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@chakra-ui/theme-tools": "^1.1.7",
-    "@chakra-ui/react": "^1.6.4",
     "@emotion/jest": "^11.3.0",
     "@testing-library/dom": "^7.31.2",
     "@testing-library/jest-dom": "^5.14.1",
