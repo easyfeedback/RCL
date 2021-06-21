@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/create-component",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "description": "Tool to create a new component.",
   "homepage": "https://github.com/easyfeedback/RCL/tree/main/tools/create-component#readme",
