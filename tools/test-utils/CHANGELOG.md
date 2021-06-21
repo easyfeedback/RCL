@@ -1,5 +1,13 @@
 # @easyfeedback/test-utils
 
+## 1.1.8
+
+### Patch Changes
+
+- [#74](https://github.com/easyfeedback/RCL/pull/74)
+  [`762e6b1`](https://github.com/easyfeedback/RCL/commit/762e6b1901a08ad106d25891aeab6e9aa443411d)
+  Thanks [@mheob](https://github.com/mheob)! - Add missing `@chakra-ui/theme-tools` package import
+
 ## 1.1.7
 
 ### Patch Changes
