@@ -1,9 +1,10 @@
 {
   "name": "@easyfeedback/survey",
   "version": "0.0.0",
-  "description": "Survey",
+  "description": "A collection of component for surveys",
   "keywords": [
-    "easyfeedback"
+    "easyfeedback",
+    "survey"
   ],
   "homepage": "https://github.com/easyfeedback/RCL#readme",
   "bugs": {
@@ -23,16 +24,17 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
   "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "concurrently yarn:build:*",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "lint": "concurrently yarn:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
-    "lint:style": "stylelint '**/*.{css,scss,js,jsx,ts,tsx}' --ignore-path ../../config/.stylelintignore",
     "lint:types": "tsc --noEmit",
     "test": "jest --env=jsdom --passWithNoTests",
     "test:ci": "jest --runInBand",
@@ -41,23 +43,25 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/test-utils": "^1.1.1",
-    "@types/uuid": "^8.3.0",
+    "@easyfeedback/test-utils": "^1.1.7",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^1.6.3",
+    "@types/uuid": "^8.3.0",
+    "@chakra-ui/react": "^1.6.4",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.0",
-    "react": "^16.13.0 || ^17.0.0"
+    "react": "^16.13.0 || ^17.0.0",
+    "react-dom": "^16.13.0 || ^17.0.0"
   },
   "publishConfig": {
     "access": "public"

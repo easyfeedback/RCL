@@ -1,9 +1,10 @@
-import { Box, Image, Icon, Text, useRadio, useCheckbox } from '@chakra-ui/react'
+import { Box, Icon, Image, Text, useCheckbox, useRadio } from '@chakra-ui/react'
 import { FaCheck } from 'react-icons/fa'
-import { IoSquareOutline, IoEllipse, IoRadioButtonOff } from 'react-icons/io5'
-import { ItemProps } from '.'
-import { itemStyle } from './style'
+import { IoEllipse, IoRadioButtonOff, IoSquareOutline } from 'react-icons/io5'
 import { v1 as uuid } from 'uuid'
+
+import { itemStyle } from './style'
+import { ItemProps } from '.'
 
 export const Item = (props: ItemProps) => {
   const { getInputProps, getLabelProps, getCheckboxProps } =

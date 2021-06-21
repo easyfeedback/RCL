@@ -14,18 +14,9 @@ export default {
     name: 'my_items_group',
     itemType: 'radio',
     options: [
-      {
-        value: 'value_1',
-        label: 'Value 1',
-      },
-      {
-        value: 'value_2',
-        label: 'Value 2',
-      },
-      {
-        value: 'value_3',
-        label: 'Value 3',
-      },
+      { value: 'value_1', label: 'Value 1' },
+      { value: 'value_2', label: 'Value 2' },
+      { value: 'value_3', label: 'Value 3' },
     ],
     direction: 'vertical',
     withLabels: true,
