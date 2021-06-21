@@ -5,6 +5,11 @@ import { ItemProps, OptionObj } from '../Item/models/ItemProps'
 import { ItemGroupProps } from './'
 import { itemGroupStyle } from './style'
 
+/**
+ * TODO: Add Description
+ *
+ * My really useful description of the component.
+ */
 export const ItemGroup = (props: ItemGroupProps) => {
   const { itemType } = props
   const defaultProps = {

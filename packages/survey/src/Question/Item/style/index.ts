@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { useColorModeValue, CSSObject, useTheme } from '@chakra-ui/react'
-import { isDark, lighten, darken, transparentize } from '@chakra-ui/theme-tools'
+import { CSSObject, useColorModeValue, useTheme } from '@chakra-ui/react'
+import { darken, isDark, lighten, transparentize } from '@chakra-ui/theme-tools'
+
 import { ItemProps } from '../models/ItemProps'
 
 export const itemStyle = ({ isChecked, activeColor, withImages }: ItemProps): CSSObject => {
