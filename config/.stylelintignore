@@ -1,9 +1,0 @@
-# node
-**/node_modules/**
-
-# production
-**/dist/**
-**/docs-build/**
-
-# test
-**/coverage/**

@@ -23,8 +23,8 @@
     "isolatedModules": true,
     "strictPropertyInitialization": true
   },
-  "include": ["packages/**/*.{ts,tsx}", "tools/**/*.{ts,tsx}", "config/jest-setup.ts"],
-  "exclude": ["node_modules", "docs-build"],
+  "include": ["packages", "tools", "config/jest-setup.ts"],
+  "exclude": ["node_modules", "docs-build", "coverage", "dist"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",

@@ -4,10 +4,8 @@ const emotionReactPath = path.dirname(require.resolve('@emotion/react/package.js
 const emotionStyledPath = path.dirname(require.resolve('@emotion/styled/package.json'))
 
 module.exports = {
-  stories: [
-    '../packages/**/stories/*.stories.mdx',
-    '../packages/**/stories/*.stories.@(js|jsx|ts|tsx)',
-  ],
+  stories: ['../packages/**/stories/*.stories.@(mdx|tsx)'],
+
   addons: [
     {
       name: '@storybook/addon-essentials',
@@ -18,6 +16,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
   ],
+
   babel: async (options) => ({
     ...options,
     plugins: [
@@ -27,6 +26,7 @@ module.exports = {
       ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
     ],
   }),
+
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
@@ -36,6 +36,7 @@ module.exports = {
       },
     },
   },
+
   webpackFinal: async (config) => {
     return {
       ...config,
