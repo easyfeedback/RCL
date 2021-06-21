@@ -6,8 +6,12 @@ module.exports = {
     '^.+\\.(ts|tsx)?$': 'ts-jest/dist',
   },
   modulePathIgnorePatterns: ['<rootDir>/docs-build', '<rootDir>/tools'],
-  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
-  coveragePathIgnorePatterns: ['<rootDir>/docs-build', '<rootDir>/tools'],
+  testPathIgnorePatterns: ['<rootDir>/packages/*/dist'],
+  coveragePathIgnorePatterns: [
+    '<rootDir>/docs-build',
+    '<rootDir>/tools',
+    '<rootDir>/packages/*/dist',
+  ],
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
   globals: {
     'ts-jest': {
