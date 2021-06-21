@@ -5,6 +5,8 @@ const isESM = BABEL_ENV !== undefined && BABEL_ENV === 'esm'
 module.exports = function (api) {
   api.cache(true)
 
+  const compact = false
+
   const presets = [
     [
       '@babel/env',
@@ -26,6 +28,7 @@ module.exports = function (api) {
   ]
 
   return {
+    compact,
     presets,
     plugins,
   }
