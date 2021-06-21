@@ -3,7 +3,7 @@
   "version": "1.0.6",
   "private": true,
   "description": "Tool to create a new component.",
-  "homepage": "https://github.com/easyfeedback/RCL#readme",
+  "homepage": "https://github.com/easyfeedback/RCL/tree/main/tools/create-component#readme",
   "bugs": {
     "url": "https://github.com/easyfeedback/RCL/issues"
   },
