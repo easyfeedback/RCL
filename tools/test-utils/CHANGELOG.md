@@ -1,5 +1,13 @@
 # @easyfeedback/test-utils
 
+## 1.1.9
+
+### Patch Changes
+
+- [#77](https://github.com/easyfeedback/RCL/pull/77)
+  [`dee7aae`](https://github.com/easyfeedback/RCL/commit/dee7aae5339ba03f66089758c3b3f734a12bcc3a)
+  Thanks [@mheob](https://github.com/mheob)! - Fix chakra dependencies
+
 ## 1.1.8
 
 ### Patch Changes
