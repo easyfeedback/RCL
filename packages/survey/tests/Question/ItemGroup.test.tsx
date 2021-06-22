@@ -95,7 +95,7 @@ describe('ItemGroup component', () => {
 
     if (item.length > 0) {
       fireEvent.click(item[0])
-      expect(clickEvent.mock.calls.length).toBe(1)
+      expect(clickEvent).toBeCalledTimes(1)
     }
 
     const val2 = mockDefaultProps.options[2].value
@@ -103,7 +103,7 @@ describe('ItemGroup component', () => {
 
     if (val2.length > 0) {
       fireEvent.click(item2[0])
-      expect(clickEvent.mock.calls.length).toBe(2)
+      expect(clickEvent).toBeCalledTimes(2)
     }
   })
 
@@ -118,7 +118,7 @@ describe('ItemGroup component', () => {
 
     if (item.length > 0) {
       fireEvent.click(item[0])
-      expect(clickEvent.mock.calls.length).toBe(1)
+      expect(clickEvent).toBeCalledTimes(1)
     }
   })
 })
