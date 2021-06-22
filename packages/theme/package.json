@@ -41,6 +41,9 @@
     "test:cov": "yarn test --coverage",
     "test:watch": "yarn test --watch -u"
   },
+  "dependencies": {
+    "@chakra-ui/theme-tools": "^1.1.7"
+  },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.4",
     "@emotion/react": "^11.4.0",
