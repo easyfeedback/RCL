@@ -1,21 +1,21 @@
 export type OptionObj = {
-  /* the value */
+  /* The item value for the input field */
   value: string
-  /* label we should display (if selected) */
+  /* The label we should display (when withLabels is active) */
   label: string
-  /* image to show */
+  /* The image we should display (when withImages is active) */
   imageSrc?: string
 }
 
 export type ItemProps = {
-  /* which type we should use */
+  /* The item type we should use */
   itemType: 'checkbox' | 'radio'
-  /* the color used when checked is true */
+  /* The color used when checked is true */
   activeColor: string
-  /* chakra controlled value */
+  /* This is chakra controlled value */
   isChecked?: boolean
-  /* show or hide labels */
+  /* The option to show or hide labels */
   withLabels: boolean
-  /* show or hide images */
+  /* The option to show or hide images */
   withImages: boolean
 } & Pick<OptionObj, 'value' | 'label' | 'imageSrc'>
