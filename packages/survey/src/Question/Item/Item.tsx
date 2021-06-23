@@ -19,22 +19,34 @@ export const Item = (props: ItemProps) => {
   const label_uid = uuid()
 
   return (
-    <Box as="label" id={label_uid} {...label} __css={_itemStyle}>
+    <Box data-testid="Item" as="label" id={label_uid} {...label} __css={_itemStyle}>
       <input {...input} aria-label={props.label} aria-labelledby={label_uid} />
-      <Box {...checkbox}>
-        {props.withImages && <Image src={props.imageSrc} alt={props.label} />}
-        <Box display={'flex'} alignItems={'flex-end'}>
+      <Box data-testid="ItemWrapper" {...checkbox}>
+        {props.withImages && (
+          <Image data-testid="ItemImage" src={props.imageSrc} alt={props.label} />
+        )}
+        <Box data-testid="ItemIconWrapper" display={'flex'} alignItems={'flex-end'}>
           {props.itemType === 'radio' ? (
-            <Icon as={props.isChecked ? IoEllipse : IoRadioButtonOff} display="block" />
+            <Icon
+              data-testid="ItemIconRadio"
+              as={props.isChecked ? IoEllipse : IoRadioButtonOff}
+              display="block"
+            />
           ) : (
-            <Icon as={props.isChecked ? FaCheck : IoSquareOutline} display="block" />
+            <Icon
+              data-testid="ItemIconCheckbox"
+              as={props.isChecked ? FaCheck : IoSquareOutline}
+              display="block"
+            />
           )}
-          {props.withLabels && props.withImages && <Text>{props.label}</Text>}
+          {props.withLabels && props.withImages && (
+            <Text data-testid="ItemImageLabel">{props.label}</Text>
+          )}
         </Box>
       </Box>
       {props.withLabels && !props.withImages && (
-        <Box {...checkbox} marginLeft={1} flexGrow={1}>
-          <Text>{props.label}</Text>
+        <Box data-testid="ItemLabelWrapper" {...checkbox} marginLeft={1} flexGrow={1}>
+          <Text data-testid="ItemLabel">{props.label}</Text>
         </Box>
       )}
     </Box>
