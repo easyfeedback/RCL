@@ -14,8 +14,8 @@ export const itemStyle = ({ isChecked, activeColor, withImages }: ItemProps): CS
     transparentize('white', 0.22)(theme)
   )
   const hoverActiveColor = isDark(activeColor)(theme)
-    ? darken(activeColor, 0.05)(theme)
-    : lighten(activeColor, 0.05)(theme)
+    ? darken(activeColor, 5)(theme)
+    : lighten(activeColor, 5)(theme)
 
   const textColor = useColorModeValue('black', 'white')
   const textColorActive = isDark(activeColor)(theme) ? 'white' : 'black'
