@@ -6,9 +6,9 @@ import { ItemGroupProps } from './'
 import { itemGroupStyle } from './style'
 
 /**
- * TODO: Add Description
+ * `ItemGroup` is a collection of Item components.
  *
- * My really useful description of the component.
+ * Since `ItemGroup` needs options to work on it check the ItemGroupProps definition for all cases
  */
 export const ItemGroup = (props: ItemGroupProps) => {
   const { itemType } = props
