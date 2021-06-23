@@ -1,10 +1,10 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
 
-import { ItemGroup, ItemGroupProps } from '../src/Question/ItemGroup'
+import { CheckRadioGroup, CheckRadioGroupProps } from '../src'
 
 export default {
-  title: 'Components/Survey/Question/ItemGroup',
-  component: ItemGroup,
+  title: 'Components/Survey/Question/CheckRadioGroup',
+  component: CheckRadioGroup,
   argTypes: {
     activeColor: {
       control: 'color',
@@ -24,7 +24,7 @@ export default {
   },
 } as Meta
 
-const Template: Story<ItemGroupProps> = (args) => <ItemGroup {...args} />
+const Template: Story<CheckRadioGroupProps> = (args) => <CheckRadioGroup {...args} />
 
 export const Default = Template.bind({})
 
