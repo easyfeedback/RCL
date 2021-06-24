@@ -8,10 +8,11 @@ import {
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { theme } from '@easyfeedback/theme'
 import { StoryContext } from '@storybook/react'
 import * as React from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
+
+import { theme } from '../packages/theme'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

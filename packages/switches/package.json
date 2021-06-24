@@ -42,7 +42,7 @@
     "test:watch": "yarn test --watch -u"
   },
   "dependencies": {
-    "@easyfeedback/test-utils": "^1.1.7",
+    "@easyfeedback/test-utils": "^1.1.9",
     "@easyfeedback/utils": "^1.0.7",
     "react-icons": "^4.2.0"
   },
