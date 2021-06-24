@@ -5,13 +5,14 @@ import { IoEllipse, IoRadioButtonOff, IoSquareOutline } from 'react-icons/io5'
 import { IconType } from 'react-icons/lib'
 import { v1 as uuid } from 'uuid'
 
-import { useColors } from './hooks/useColors'
+import { useColors } from './hooks'
 import { Option } from './models/Item'
+import { getItemGroupStyles } from './styles'
 
 export type ItemProps = {
-  /** The input type to use. */
-  itemType: 'checkbox' | 'radio'
-  /** The color used if the input element is checked. */
+  /** The `type` of the input element. */
+  inputType?: 'checkbox' | 'radio'
+  /** The `color` used if the input element is checked. */
   activeColor: string
   /** If `true`, the `checkbox` / `radio` element will be checked. Use `onChange` to update its value */
   isChecked?: boolean
@@ -25,7 +26,7 @@ export type ItemProps = {
 
 export const Item = ({
   activeColor,
-  itemType = 'checkbox',
+  inputType = 'checkbox',
   withImages = false,
   withLabels = false,
   value,
@@ -36,7 +37,7 @@ export const Item = ({
 }: ItemProps) => {
   const props = { isChecked, value, onChange }
   const { getInputProps, getLabelProps, getCheckboxProps } =
-    itemType === 'radio' ? useRadio(props) : useCheckbox(props)
+    inputType === 'radio' ? useRadio(props) : useCheckbox(props)
   const input = getInputProps()
   const labelProps = getLabelProps()
   const checkbox = getCheckboxProps()
@@ -46,8 +47,18 @@ export const Item = ({
 
   const label_uid = uuid()
 
+  const itemGroupStyles = getItemGroupStyles({
+    isChecked,
+    activeColor,
+    withImages,
+    withLabels,
+    bgColor,
+    textColor,
+    textActiveColor,
+  })
+
   const IconComponent = ({ icon }: { icon: IconType }) => (
-    <Icon as={icon} display="block" mb={2} flexGrow={2} objectFit="scale-down" />
+    <Icon as={icon} display="block" data-testid={icon.name} />
   )
 
   return (
@@ -60,24 +71,13 @@ export const Item = ({
     >
       <input {...input} aria-label={label} aria-labelledby={label_uid} />
 
-      <Flex
-        {...checkbox}
-        userSelect="none"
-        cursor="pointer"
-        borderWidth="1px"
-        borderRadius="md"
-        p={4}
-        direction={withImages ? 'column' : 'initial'}
-        align={withImages ? 'initial' : 'center'}
-        bgColor={bgColor}
-        color={textColor}
-        _checked={{ bgColor: activeColor, color: textActiveColor }}
-        data-testid="ItemRow"
-      >
-        {withImages && <Image src={imageSrc} alt={label} />}
+      <Flex {...checkbox} __css={itemGroupStyles} data-testid="ItemGroup">
+        {withImages && (
+          <Image src={imageSrc} alt={label} mb={2} flexGrow={2} objectFit="scale-down" />
+        )}
 
-        <Flex align="flex-end">
-          {itemType === 'radio' ? (
+        <Flex>
+          {inputType === 'radio' ? (
             <IconComponent icon={isChecked ? IoEllipse : IoRadioButtonOff} />
           ) : (
             <IconComponent icon={isChecked ? FaCheck : IoSquareOutline} />
@@ -87,8 +87,8 @@ export const Item = ({
       </Flex>
 
       {withLabels && !withImages && (
-        <Box {...checkbox} ml={1} flexGrow={1}>
-          <Text ml={1}>{label}</Text>
+        <Box {...checkbox} __css={itemGroupStyles} flexGrow={1}>
+          <Text>{label}</Text>
         </Box>
       )}
     </Flex>

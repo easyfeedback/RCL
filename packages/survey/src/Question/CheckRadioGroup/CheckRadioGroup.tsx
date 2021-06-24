@@ -17,7 +17,7 @@ export type CheckRadioGroupProps = {
   direction?: 'vertical' | 'horizontal'
   /** The maximum of columns to use. Only works if images are used. */
   maxColumns?: number
-} & Pick<ItemProps, 'itemType' | 'activeColor' | 'withLabels' | 'withImages'> &
+} & Pick<ItemProps, 'inputType' | 'activeColor' | 'withLabels' | 'withImages'> &
   Pick<UseRadioGroupProps, 'name' | 'defaultValue' | 'onChange'> &
   Pick<UseCheckboxGroupProps, 'defaultValue' | 'onChange'>
 
@@ -28,9 +28,9 @@ export type CheckRadioGroupProps = {
  */
 export const CheckRadioGroup = ({
   options,
-  direction = 'horizontal',
+  direction = 'vertical',
   maxColumns,
-  itemType,
+  inputType = 'checkbox',
   activeColor,
   withLabels,
   withImages,
@@ -42,7 +42,8 @@ export const CheckRadioGroup = ({
   const { getRootProps, getRadioProps } = useRadioGroup({ name, ...defaultProps })
   const { getCheckboxProps } = useCheckboxGroup(defaultProps)
 
-  const rootProps = itemType === 'radio' ? getRootProps() : {}
+  const rootProps = inputType === 'radio' ? getRootProps() : {}
+  const generellItemProps = { inputType, activeColor, withLabels, withImages }
 
   const [rootStyles, setRootStyles] = useState({})
   useEffect(() => {
@@ -65,19 +66,16 @@ export const CheckRadioGroup = ({
     <Box {...rootProps} {...rootStyles} data-testid="CheckRadioGroup">
       {options.map(({ value, label, imageSrc }: Option) => {
         const htmlProps =
-          itemType === 'radio' ? getRadioProps({ value }) : getCheckboxProps({ value })
+          inputType === 'radio' ? getRadioProps({ value }) : getCheckboxProps({ value })
 
-        const itemProps: ItemProps = {
-          itemType,
-          activeColor,
-          withLabels,
-          withImages,
+        const itemProps: Option = {
           value,
           label,
           imageSrc,
         }
 
-        return <Item key={value} {...htmlProps} {...itemProps} />
+        // @ts-ignore TS2322
+        return <Item key={value} {...generellItemProps} {...htmlProps} {...itemProps} />
       })}
     </Box>
   )

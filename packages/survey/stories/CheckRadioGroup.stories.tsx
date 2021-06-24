@@ -11,15 +11,11 @@ export default {
     },
   },
   args: {
-    name: 'my_items_group',
-    itemType: 'radio',
     options: [
       { value: 'value_1', label: 'Value 1' },
       { value: 'value_2', label: 'Value 2' },
       { value: 'value_3', label: 'Value 3' },
     ],
-    direction: 'vertical',
-    withLabels: true,
     activeColor: '#990033',
   },
 } as Meta
@@ -28,40 +24,45 @@ const Template: Story<CheckRadioGroupProps> = (args) => <CheckRadioGroup {...arg
 
 export const Default = Template.bind({})
 
-export const WithOnChangeEvent = Template.bind({})
-WithOnChangeEvent.args = {
-  onChange: (val) => alert(val + ' selected'),
+export const RadioWithChangeEvent = Template.bind({})
+RadioWithChangeEvent.args = {
+  inputType: 'radio',
+  withLabels: true,
+  // @ts-ignore TS2322
+  onChange: (val: string) => alert(val + ' selected'),
 }
 
 export const RadioWithDefaultValue = Template.bind({})
 RadioWithDefaultValue.args = {
+  inputType: 'radio',
+  withLabels: true,
+  // @ts-ignore TS2322
   defaultValue: 'value_2',
 }
 
 export const CheckboxesWithDefaultValue = Template.bind({})
 CheckboxesWithDefaultValue.args = {
-  itemType: 'checkbox',
+  inputType: 'checkbox',
+  withLabels: true,
+  // @ts-ignore TS2322
   defaultValue: ['value_2', 'value_3'],
 }
 
 export const HorizontalRadios = Template.bind({})
 HorizontalRadios.args = {
-  itemType: 'radio',
   direction: 'horizontal',
-  withLabels: false,
+  inputType: 'radio',
 }
 
 export const HorizontalCheckboxes = Template.bind({})
 HorizontalCheckboxes.args = {
-  itemType: 'checkbox',
   direction: 'horizontal',
+  inputType: 'checkbox',
   withLabels: false,
 }
 
 export const UseImages = Template.bind({})
 UseImages.args = {
-  direction: 'horizontal',
-  itemType: 'checkbox',
   options: [
     {
       value: 'happy_doggo',
@@ -82,6 +83,37 @@ UseImages.args = {
       label: 'Doggo',
     },
   ],
+  direction: 'horizontal',
+  inputType: 'checkbox',
+  withImages: true,
+}
+
+export const UseImagesAndLabels = Template.bind({})
+UseImagesAndLabels.args = {
+  options: [
+    {
+      value: 'happy_doggo',
+      imageSrc:
+        'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?fit=crop&w=256&h=256&q=60',
+      label: 'Happy Doggo',
+    },
+    {
+      value: 'serious_doggo',
+      imageSrc:
+        'https://images.unsplash.com/photo-1585559700398-1385b3a8aeb6?fit=crop&w=256&h=256&q=60',
+      label: 'Serious Doggo',
+    },
+    {
+      value: 'doggo',
+      imageSrc:
+        'https://images.unsplash.com/photo-1558788353-f76d92427f16?fit=crop&w=256&h=256&q=60',
+      label: 'Doggo',
+    },
+  ],
+  direction: 'horizontal',
+  inputType: 'checkbox',
+  withImages: true,
+  withLabels: true,
 }
 
 export const Limits = Template.bind({})
@@ -101,13 +133,11 @@ Limits.args = {
       label: 'Value 3',
     },
   ],
+  withLabels: true,
 }
 
 export const LimitsWithImages = Template.bind({})
 LimitsWithImages.args = {
-  maxColumns: 3,
-  direction: 'horizontal',
-  withImages: true,
   options: [
     {
       value: 'fox_dog',
@@ -134,4 +164,7 @@ LimitsWithImages.args = {
       label: 'Value 4',
     },
   ],
+  direction: 'horizontal',
+  maxColumns: 3,
+  withImages: true,
 }
