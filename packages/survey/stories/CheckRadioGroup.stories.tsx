@@ -5,6 +5,11 @@ import { CheckRadioGroup, CheckRadioGroupProps } from '../src'
 export default {
   title: 'Components/Survey/Question/CheckRadioGroup',
   component: CheckRadioGroup,
+  argTypes: {
+    activeColor: {
+      control: 'color',
+    },
+  },
   args: {
     options: [
       { value: 'value_1', label: 'Value 1' },
