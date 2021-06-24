@@ -45,7 +45,7 @@
     "test:watch": "yarn test --watch -u"
   },
   "devDependencies": {
-    "@easyfeedback/test-utils": "^1.1.7",
+    "@easyfeedback/test-utils": "^1.1.9",
     "react": "^17.0.2"
   },
   "peerDependencies": {
