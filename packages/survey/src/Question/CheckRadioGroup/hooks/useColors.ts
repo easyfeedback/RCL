@@ -13,6 +13,7 @@ export const useColors = (activeColor: string) => {
     transparentize('black', 0.25)(theme),
     transparentize('white', 0.22)(theme)
   )
+  // TODO check with designer which logic is correct - dark -> darken or vice-versa
   const hoverActiveColor = isDark(activeColor)(theme)
     ? darken(activeColor, 5)(theme)
     : lighten(activeColor, 5)(theme)

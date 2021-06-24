@@ -47,7 +47,7 @@ export const CheckRadioGroup = ({
   const { getCheckboxProps } = useCheckboxGroup(defaultProps)
 
   const rootProps = inputType === 'radio' ? getRootProps() : {}
-  const generellItemProps = { inputType, activeColor, withLabels, withImages }
+  const generalItemProps = { inputType, activeColor, withLabels, withImages }
 
   const [rootStyles, setRootStyles] = useState({})
   useEffect(() => {
@@ -62,6 +62,7 @@ export const CheckRadioGroup = ({
       setRootStyles({
         display: 'flex',
         flexDirection: direction === 'vertical' ? 'column' : 'row',
+        gridGap: 1,
       })
     }
   }, [maxColumns, direction])
@@ -78,8 +79,7 @@ export const CheckRadioGroup = ({
           imageSrc,
         }
 
-        // @ts-ignore TS2322
-        return <Item key={value} {...generellItemProps} {...htmlProps} {...itemProps} />
+        return <Item key={value} {...generalItemProps} {...htmlProps} {...itemProps} />
       })}
     </Box>
   )

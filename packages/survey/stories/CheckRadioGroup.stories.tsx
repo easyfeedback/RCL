@@ -23,7 +23,6 @@ export const RadioWithChangeEvent = Template.bind({})
 RadioWithChangeEvent.args = {
   inputType: 'radio',
   withLabels: true,
-  // @ts-ignore TS2322
   onChange: (val: string) => alert(val + ' selected'),
 }
 
@@ -31,7 +30,6 @@ export const RadioWithDefaultValue = Template.bind({})
 RadioWithDefaultValue.args = {
   inputType: 'radio',
   withLabels: true,
-  // @ts-ignore TS2322
   defaultValue: 'value_2',
 }
 
@@ -39,7 +37,6 @@ export const CheckboxesWithDefaultValue = Template.bind({})
 CheckboxesWithDefaultValue.args = {
   inputType: 'checkbox',
   withLabels: true,
-  // @ts-ignore TS2322
   defaultValue: ['value_2', 'value_3'],
 }
 

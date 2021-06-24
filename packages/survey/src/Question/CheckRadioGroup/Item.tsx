@@ -1,5 +1,5 @@
 import { Box, Flex, Icon, Image, Text, useCheckbox, useRadio } from '@chakra-ui/react'
-import { ChangeEvent } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { FaCheck } from 'react-icons/fa'
 import { IoEllipse, IoRadioButtonOff, IoSquareOutline } from 'react-icons/io5'
 import { IconType } from 'react-icons/lib'
@@ -45,7 +45,8 @@ export const Item = ({
   const { bgColor, hoverActiveColor, hoverColor, textColor, textActiveColor } =
     useColors(activeColor)
 
-  const label_uid = uuid()
+  // TODO set uuid as props else create uuid on the fly
+  const [label_uid] = useState(uuid())
 
   const itemGroupStyles = getItemGroupStyles({
     isChecked,
@@ -71,12 +72,13 @@ export const Item = ({
     >
       <input {...input} aria-label={label} aria-labelledby={label_uid} />
 
+      {/* TODO focus style missing (use like hover?) */}
       <Flex {...checkbox} __css={itemGroupStyles} data-testid="ItemGroup">
         {withImages && (
           <Image src={imageSrc} alt={label} mb={2} flexGrow={2} objectFit="scale-down" />
         )}
 
-        <Flex>
+        <Flex alignItems={'flex-end'}>
           {inputType === 'radio' ? (
             <IconComponent icon={isChecked ? IoEllipse : IoRadioButtonOff} />
           ) : (
@@ -86,8 +88,9 @@ export const Item = ({
         </Flex>
       </Flex>
 
+      {/* TODO focus style missing (use like hover?) */}
       {withLabels && !withImages && (
-        <Box {...checkbox} __css={itemGroupStyles} flexGrow={1}>
+        <Box {...checkbox} __css={itemGroupStyles} ml={1} flexGrow={1}>
           <Text>{label}</Text>
         </Box>
       )}
