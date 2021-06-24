@@ -11,7 +11,11 @@ import { Item, ItemProps } from './Item'
 import { Option } from './models/Item'
 
 export type CheckRadioGroupProps = {
-  /** All available options within the group. */
+  /**
+   * All available options within the group.
+   *
+   * Each `Option` item has `value: string`, `label: string` and the optional `imageSrc?: string` properties.
+   */
   options: Option[]
   /** The direction how the group component should be rendered. */
   direction?: 'vertical' | 'horizontal'
