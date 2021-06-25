@@ -24,7 +24,10 @@ module.exports = function (api) {
 
   const plugins = [
     '@chakra-ui/babel-plugin',
+    // i: The `loose` option fixes output warnings of storybook
     ['@babel/plugin-proposal-class-properties', { loose: true }],
+    ['@babel/plugin-proposal-private-methods', { loose: true }],
+    ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
   ]
 
   return {
