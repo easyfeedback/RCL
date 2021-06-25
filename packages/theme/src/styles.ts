@@ -7,7 +7,7 @@ export const styles: Styles = {
       color: mode('black', 'whiteAlpha.900')(props),
       bg: mode('white', 'black')(props),
       transition: 'background-color 0.2s, color 0.2s',
-      lineHeight: 'base',
+      lineHeight: '1',
     },
     '*::placeholder': {
       color: mode('gray.400', 'whiteAlpha.400')(props),

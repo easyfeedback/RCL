@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "amatiasq.sort-imports",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint",
