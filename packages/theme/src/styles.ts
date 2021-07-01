@@ -16,5 +16,12 @@ export const styles: Styles = {
       borderColor: mode('gray.200', 'whiteAlpha.300')(props),
       wordWrap: 'break-word',
     },
+    // Accessibility
+    '*:focus': {
+      boxShadow: 'none !important',
+    },
+    '.user-is-tabbing *:focus': {
+      boxShadow: 'var(--chakra-shadows-outline) !important',
+    },
   }),
 }

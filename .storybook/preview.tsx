@@ -12,7 +12,7 @@ import { StoryContext } from '@storybook/react'
 import * as React from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
 
-import { theme } from '../packages/theme'
+import { theme, useFocusRingOnlyOnTab } from '../packages/theme'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -35,6 +35,8 @@ const ColorModeToggleBar = () => {
   const { toggleColorMode } = useColorMode()
   const SwitchIcon = useColorModeValue(FaMoon, FaSun)
   const nextMode = useColorModeValue('dark', 'light')
+
+  useFocusRingOnlyOnTab()
 
   return (
     <Flex justify="flex-end" mb={4}>
