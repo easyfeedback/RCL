@@ -4,20 +4,18 @@ import {
   Icon,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
-import { FaPlane, FaPlus } from 'react-icons/fa'
+import { FaPlus, FaQuestion, FaSearch } from 'react-icons/fa'
 
 export type IconButtonProps = {
   /** A11y: A label that describes the button. */
   ariaLabel: string
   /** The size of the button. */
   size?: 'sm' | 'lg'
-  /**
-   * The icon variant to render.
-   *
-   * @todo Remove `plane` after another icon was added
-   */
-  variant?: 'add' | 'plane'
-} & Pick<ChakraIconButtonProps, 'onClick'>
+  /** The icon variant to render. */
+  iconVariant?: 'add' | 'help' | 'search'
+  /** The variant of the styling. */
+  variant?: 'outline' | 'solid' | 'ghost' | 'unstyled'
+} & Pick<ChakraIconButtonProps, 'colorScheme' | 'onClick'>
 
 /**
  * `IconButton` composes the Button component except that it renders only an icon.
@@ -28,27 +26,31 @@ export type IconButtonProps = {
 export const IconButton = ({
   ariaLabel,
   size = 'lg',
-  variant = 'add',
+  iconVariant = 'add',
+  variant = 'solid',
+  colorScheme = 'teal',
   onClick,
 }: IconButtonProps) => {
   const [icon, setIcon] = useState<JSX.Element>()
 
   useEffect(() => {
     const getIcon = () => {
-      switch (variant) {
+      switch (iconVariant) {
         case 'add':
           return <Icon as={FaPlus} data-testid="FaPlus" />
-        // TODO: `Plane` is currently only a placeholder and will removed after another icon was added
-        case 'plane':
-          return <Icon as={FaPlane} data-testid="FaPlane" />
+        case 'help':
+          return <Icon as={FaQuestion} data-testid="FaQuestion" />
+        case 'search':
+          return <Icon as={FaSearch} data-testid="FaSearch" />
       }
     }
     setIcon(getIcon())
-  }, [variant])
+  }, [iconVariant])
 
   return (
     <ChakraIconButton
-      colorScheme="teal"
+      colorScheme={colorScheme}
+      variant={variant}
       aria-label={ariaLabel}
       size={size === 'lg' ? 'lg' : 'xs'}
       fontSize={size === 'lg' ? '2xl' : 'xs'}

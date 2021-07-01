@@ -4,10 +4,10 @@ import { IconButton, IconButtonProps } from '@easyfeedback/buttons'
 export type AddNewItemCardProps = {
   /** The label of the component. */
   label: string
-} & Partial<Pick<IconButtonProps, 'variant' | 'onClick'>>
+} & Partial<Pick<IconButtonProps, 'iconVariant' | 'onClick'>>
 
 /** `AddNewItemCard` is a Card component for adding a new item. */
-export const AddNewItemCard = ({ label, onClick, variant = 'add' }: AddNewItemCardProps) => {
+export const AddNewItemCard = ({ label, onClick, iconVariant = 'add' }: AddNewItemCardProps) => {
   return (
     <Center
       as="article"
@@ -21,7 +21,7 @@ export const AddNewItemCard = ({ label, onClick, variant = 'add' }: AddNewItemCa
       borderColor="gray.300"
       data-testid="AddNewItemCard"
     >
-      <IconButton ariaLabel={label} variant={variant} onClick={onClick} />
+      <IconButton ariaLabel={label} iconVariant={iconVariant} onClick={onClick} />
       <Text fontSize="sm" fontWeight="bold" align="center" mt="1rem">
         {label}
       </Text>
