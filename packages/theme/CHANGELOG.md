@@ -1,5 +1,18 @@
 # @easyfeedback/theme
 
+## 1.2.0
+
+### Minor Changes
+
+- [#88](https://github.com/easyfeedback/RCL/pull/88)
+  [`810f614`](https://github.com/easyfeedback/RCL/commit/810f614e50ebfa812837e3c12db0c3f1dde3c37e)
+  Thanks [@mheob](https://github.com/mheob)! - Set the default color scheme to gray
+
+* [#87](https://github.com/easyfeedback/RCL/pull/87)
+  [`c940768`](https://github.com/easyfeedback/RCL/commit/c940768b4d8c54f4df5cbd84c6c08149f2f08cc5)
+  Thanks [@mheob](https://github.com/mheob)! - Remove the `:focus` ring on click, but leave it
+  pressing `Tab`.
+
 ## 1.1.6
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@easyfeedback/switches",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Switches are used as an alternative for the Checkbox component.",
   "keywords": [
     "easyfeedback"
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@easyfeedback/test-utils": "^1.1.9",
-    "@easyfeedback/utils": "^1.0.7",
+    "@easyfeedback/utils": "^1.0.8",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
