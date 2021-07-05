@@ -36,5 +36,11 @@
     "prefix": "ec",
     "body": ["export const ${1} = ${0}"],
     "description": "Export Const"
+  },
+  "Export * from": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "eaf",
+    "body": ["export * from '${0}'"],
+    "description": "Export * from"
   }
 }
