@@ -1,5 +1,22 @@
 # @easyfeedback/cards
 
+## 1.2.6
+
+### Patch Changes
+
+- [#88](https://github.com/easyfeedback/RCL/pull/88)
+  [`810f614`](https://github.com/easyfeedback/RCL/commit/810f614e50ebfa812837e3c12db0c3f1dde3c37e)
+  Thanks [@mheob](https://github.com/mheob)! - Add more `IconButton` variants
+
+* [#83](https://github.com/easyfeedback/RCL/pull/83)
+  [`1082880`](https://github.com/easyfeedback/RCL/commit/10828807383a0e0b4c7c733a6b31d36ccf82001e)
+  Thanks [@mheob](https://github.com/mheob)! - Update dependencies
+
+* Updated dependencies
+  [[`810f614`](https://github.com/easyfeedback/RCL/commit/810f614e50ebfa812837e3c12db0c3f1dde3c37e),
+  [`1082880`](https://github.com/easyfeedback/RCL/commit/10828807383a0e0b4c7c733a6b31d36ccf82001e)]:
+  - @easyfeedback/buttons@1.3.0
+
 ## 1.2.5
 
 ### Patch Changes

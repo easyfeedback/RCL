@@ -1,5 +1,17 @@
 # @easyfeedback/switches
 
+## 1.0.6
+
+### Patch Changes
+
+- [#83](https://github.com/easyfeedback/RCL/pull/83)
+  [`1082880`](https://github.com/easyfeedback/RCL/commit/10828807383a0e0b4c7c733a6b31d36ccf82001e)
+  Thanks [@mheob](https://github.com/mheob)! - Update dependencies
+
+- Updated dependencies
+  [[`1082880`](https://github.com/easyfeedback/RCL/commit/10828807383a0e0b4c7c733a6b31d36ccf82001e)]:
+  - @easyfeedback/utils@1.0.8
+
 ## 1.0.5
 
 ### Patch Changes
