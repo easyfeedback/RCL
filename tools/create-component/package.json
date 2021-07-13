@@ -20,10 +20,10 @@
     "lint:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@types/fs-extra": "^9.0.11",
-    "@types/listr": "^0.14.3",
-    "@types/lodash": "^4.14.170",
-    "@types/mustache": "^4.1.1",
+    "@types/fs-extra": "^9.0.12",
+    "@types/listr": "^0.14.4",
+    "@types/lodash": "^4.14.171",
+    "@types/mustache": "^4.1.2",
     "@types/prompts": "^2.4.0",
     "fs-extra": "^10.0.0",
     "glob": "^7.1.7",
