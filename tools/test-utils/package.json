@@ -35,12 +35,12 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/react-hooks": "^7.0.1",
     "@testing-library/user-event": "^13.1.9",
-    "@types/jest-axe": "^3.5.1",
+    "@types/jest-axe": "^3.5.2",
     "jest-axe": "^5.0.1",
     "react-test-renderer": "^17.0.2"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^1.6.4",
+    "@chakra-ui/react": "^1.6.5",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
