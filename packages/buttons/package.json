@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@easyfeedback/theme": "^1.2.0",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.8",
