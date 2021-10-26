@@ -30,11 +30,11 @@
   },
   "dependencies": {
     "@emotion/jest": "^11.5.0",
-    "@testing-library/dom": "^8.9.1",
+    "@testing-library/dom": "^8.10.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
-    "@testing-library/user-event": "^13.4.1",
+    "@testing-library/user-event": "^13.5.0",
     "@types/jest-axe": "^3.5.3",
     "jest-axe": "^5.0.1",
     "react-test-renderer": "^17.0.2"
