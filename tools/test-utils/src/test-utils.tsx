@@ -2,7 +2,6 @@ import '@testing-library/jest-dom/extend-expect'
 
 import { matchers } from '@emotion/jest'
 import { RenderOptions, RenderResult, fireEvent, render as rtlRender } from '@testing-library/react'
-import { RunOptions } from 'axe-core'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import * as React from 'react'
 
@@ -73,7 +72,8 @@ export { default as userEvent } from '@testing-library/user-event'
 
 export const escape = (ui: HTMLElement) => fireEvent.keyDown(ui, { key: 'Escape', keyCode: 27 })
 
-type TestA11YOptions = TestOptions & { axeOptions?: RunOptions }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type TestA11YOptions = TestOptions & { axeOptions?: any }
 
 /**
  * Validates against common a11y mistakes.

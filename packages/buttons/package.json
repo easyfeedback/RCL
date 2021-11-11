@@ -46,19 +46,19 @@
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^1.6.10",
+    "@chakra-ui/react": "^1.6.12",
     "@easyfeedback/test-utils": "^1.1.9",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
-    "framer-motion": "^5.0.0",
+    "framer-motion": "^5.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "@chakra-ui/react": "^1.6.0",
-    "@emotion/react": "^11.4.0",
+    "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
-    "framer-motion": "^4.1.0",
+    "framer-motion": "^5.2.0",
     "react": "^16.13.0 || ^17.0.0",
     "react-dom": "^16.13.0 || ^17.0.0"
   },
