@@ -1481,7 +1481,7 @@
   dependencies:
     "@chakra-ui/utils" "^1.7.0"
 
-"@chakra-ui/react@^1.6.10", "@chakra-ui/react@^1.6.12":
+"@chakra-ui/react@^1.6.12":
   version "1.6.12"
   resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-1.6.12.tgz#5225e2ea9fb3426006ccf01d1ac0fccabc3b9753"
   integrity sha512-hlFZPU0ZApEbzdUoUyfr5PCX8UhO4qYmTrZRhWG4noQj/uQu5WkysSHW9k8dtBS2jGIctyY6BQjm7doaQv8Mqg==
@@ -4341,7 +4341,7 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@testing-library/dom@^8.0.0", "@testing-library/dom@^8.10.1":
+"@testing-library/dom@^8.0.0", "@testing-library/dom@^8.11.1":
   version "8.11.1"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-8.11.1.tgz#03fa2684aa09ade589b460db46b4c7be9fc69753"
   integrity sha512-3KQDyx9r0RKYailW2MiYrSSKEfH0GTkI51UGEvJenvcoDoeRYs0PZpi2SXqtnMClQvCqdtTTpOfFETDTVADpAg==
@@ -4355,7 +4355,7 @@
     lz-string "^1.4.4"
     pretty-format "^27.0.2"
 
-"@testing-library/jest-dom@^5.14.1", "@testing-library/jest-dom@^5.15.0":
+"@testing-library/jest-dom@^5.15.0":
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.15.0.tgz#4f5295dbc476a14aec3b07176434b3d51aae5da7"
   integrity sha512-lOMuQidnL1tWHLEWIhL6UvSZC1Qt3OkNe1khvi2h6xFiqpe5O8arYs46OU0qyUGq0cSTbroQyMktYNXu3a7sAA==
@@ -4705,10 +4705,12 @@
   resolved "https://registry.yarnpkg.com/@types/pretty-hrtime/-/pretty-hrtime-1.0.1.tgz#72a26101dc567b0d68fd956cf42314556e42d601"
   integrity sha512-VjID5MJb1eGKthz2qUerWT8+R4b9N+CHvGCzg9fn4kWZgaF9AhdYikQio3R7wV8YY1NsQKPaCwKz1Yff+aHNUQ==
 
-"@types/prompts@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@types/prompts/-/prompts-2.4.0.tgz#b4b8fdb70a635ad6b6b34e05545f8417f639a9c9"
-  integrity sha512-7th8Opn+0XlN0O6qzO7dXOPwL6rigq/EwRS2DntaTHwSw8cLaYKeAPt5dWEKHSL+ffVSUl1itTPUC06+FlsV4Q==
+"@types/prompts@^2.0.14":
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/@types/prompts/-/prompts-2.0.14.tgz#10cb8899844bb0771cabe57c1becaaaca9a3b521"
+  integrity sha512-HZBd99fKxRWpYCErtm2/yxUZv6/PBI9J7N4TNFffl5JbrYMHBwF25DjQGTW3b3jmXq+9P6/8fCIb2ee57BFfYA==
+  dependencies:
+    "@types/node" "*"
 
 "@types/prop-types@*":
   version "15.7.4"
@@ -8906,7 +8908,7 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framer-motion@^5.0.0, framer-motion@^5.2.1:
+framer-motion@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-5.2.1.tgz#5cfa59984649d73e3741d7bf189918f34fd3635e"
   integrity sha512-igeMZaa0FnaB4NkCE+/ENGSuSvhRhUVFJCwWg/FGQn+CwnLPI/XjO6Zim8m+pN+4wBNlaesBRpqOQbq/VH7mew==

@@ -42,7 +42,7 @@ NonPublished.args = {
 export const Limits = Template.bind({})
 Limits.args = {
   title:
-    'Survey about something with users from the Application of state and democracy - inspirated by rainbows and flowers',
+    'Survey about something with users from the Application of state and democracy - inspired by rainbows and flowers',
   state: 'closed',
-  views: 12345678901234567890,
+  views: 12345678901234567890n,
 }

@@ -30,8 +30,8 @@
   },
   "dependencies": {
     "@emotion/jest": "^11.5.0",
-    "@testing-library/dom": "^8.10.1",
-    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^13.5.0",
@@ -40,18 +40,18 @@
     "react-test-renderer": "^17.0.2"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^1.6.10",
+    "@chakra-ui/react": "^1.6.12",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
-    "framer-motion": "^5.0.0",
+    "framer-motion": "^5.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "@chakra-ui/react": "^1.6.0",
-    "@emotion/react": "^11.4.0",
+    "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
-    "framer-motion": "^4.1.0",
+    "framer-motion": "^5.2.0",
     "react": "^16.13.0 || ^17.0.0",
     "react-dom": "^16.13.0 || ^17.0.0"
   },
