@@ -46,11 +46,11 @@
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^1.6.12",
+    "@chakra-ui/react": "^1.7.1",
     "@easyfeedback/test-utils": "^1.1.9",
-    "@emotion/react": "^11.5.0",
-    "@emotion/styled": "^11.3.0",
-    "framer-motion": "^5.2.1",
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "framer-motion": "^5.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
