@@ -18,16 +18,6 @@ object-assign
  */
 
 /*!
- * https://github.com/paulmillr/es6-shim
- * @license es6-shim Copyright 2013-2016 by Paul Miller (http://paulmillr.com)
- *   and contributors,  MIT License
- * es6-shim: v0.35.4
- * see https://github.com/paulmillr/es6-shim/blob/0.35.3/LICENSE
- * Details and documentation:
- * https://github.com/paulmillr/es6-shim/
- */
-
-/*!
  * is-plain-object <https://github.com/jonschlinkert/is-plain-object>
  *
  * Copyright (c) 2014-2017, Jon Schlinkert.
@@ -55,18 +45,6 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
-
-/*! axe v4.3.5
- * Copyright (c) 2021 Deque Systems, Inc.
- *
- * Your use of this Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
- * This entire copyright notice must appear in every copy of this file you
- * distribute or in any file that contains substantial portions of this source
- * code.
- */
 
 /** @license React v0.20.2
  * scheduler.production.min.js
