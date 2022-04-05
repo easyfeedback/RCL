@@ -32,20 +32,20 @@
     "@emotion/jest": "^11.7.1",
     "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
+    "@testing-library/react": "^13.0.0",
     "@testing-library/react-hooks": "^7.0.2",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/user-event": "^14.0.4",
     "@types/jest-axe": "^3.5.3",
     "jest-axe": "^6.0.0",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^18.0.0"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.7.3",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "framer-motion": "^6.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "peerDependencies": {
     "@chakra-ui/react": "^1.6.0",
