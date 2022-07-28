@@ -29,21 +29,21 @@
     "lint:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@emotion/jest": "^11.7.1",
-    "@testing-library/dom": "^8.11.1",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
+    "@emotion/jest": "^11.9.4",
+    "@testing-library/dom": "^8.16.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.5",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest-axe": "^3.5.3",
+    "@types/jest-axe": "^3.5.4",
     "jest-axe": "^6.0.0",
     "react-test-renderer": "^17.0.2"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^1.7.3",
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "framer-motion": "^6.0.0",
+    "@chakra-ui/react": "^1.8.8",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "framer-motion": "^6.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
