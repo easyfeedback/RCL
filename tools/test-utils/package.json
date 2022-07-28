@@ -36,14 +36,14 @@
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest-axe": "^3.5.3",
-    "jest-axe": "^5.0.1",
+    "jest-axe": "^6.0.0",
     "react-test-renderer": "^17.0.2"
   },
   "devDependencies": {
     "@chakra-ui/react": "^1.7.3",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
-    "framer-motion": "^5.5.5",
+    "framer-motion": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
