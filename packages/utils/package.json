@@ -31,25 +31,24 @@
     "dist"
   ],
   "scripts": {
-    "build": "concurrently yarn:build:*",
+    "build": "concurrently pnpm:build:*",
     "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
-    "lint": "concurrently yarn:lint:*",
+    "lint": "concurrently pnpm:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
     "lint:types": "tsc --noEmit",
     "test": "jest --env=jsdom --passWithNoTests",
-    "test:ci": "jest --runInBand",
-    "test:ci:cov": "yarn test:ci --coverage",
-    "test:cov": "yarn test --coverage",
-    "test:watch": "yarn test --watch -u"
+    "test:cov": "jest --env=jsdom --passWithNoTests --coverage",
+    "test:watch": "jest --env=jsdom --passWithNoTests --watch -u"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.0",
     "@easyfeedback/test-utils": "^1.1.9",
-    "react": "^17.0.2"
+    "react": "^18.2.0"
   },
   "peerDependencies": {
-    "react": "^16.13.0 || ^17.0.0"
+    "react": "^18.2.0"
   },
   "publishConfig": {
     "access": "public"

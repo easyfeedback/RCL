@@ -1,6 +1,5 @@
 import { Center, HStack, LinkBox, LinkOverlay, Spacer } from '@chakra-ui/layout'
-import { SettingsMenuButton } from '@easyfeedback/buttons'
-import { MenuListItem } from '@easyfeedback/buttons'
+import { MenuListItem, SettingsMenuButton } from '@easyfeedback/buttons'
 import { MouseEventHandler, useEffect, useState } from 'react'
 import { IoSettings, IoTrashBinOutline } from 'react-icons/io5'
 
@@ -55,7 +54,7 @@ export const SingleFolder = ({ folder, onEditSettings, onDeleteFolder }: SingleF
         <LinkOverlay
           href={folder.href}
           title={folder.title}
-          isTruncated
+          noOfLines={1}
           display="inline-block"
           maxW="13rem"
           borderBottom="3px solid transparent"

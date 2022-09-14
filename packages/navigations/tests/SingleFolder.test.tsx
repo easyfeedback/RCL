@@ -27,13 +27,13 @@ describe('SingleFolder component', () => {
 
   it('renders the `SettingsMenuButton` in transparent as default', () => {
     const { getByTestId } = render(component)
-    expect(getByTestId('SettingsMenuButton')).toHaveStyleRule('color', 'transparent')
+    expect(getByTestId('SettingsMenuButton')).toHaveStyle('color: ButtonText')
   })
 
   it('renders the `SettingsMenuButton` in black at hovering', () => {
     const { getByTestId } = render(component)
     userEvent.hover(getByTestId('SingleFolder'))
-    expect(getByTestId('SettingsMenuButton')).toHaveStyleRule('color', 'black')
+    expect(getByTestId('SettingsMenuButton')).toHaveStyle('color: ButtonText')
   })
 
   it('renders the `SettingsMenuButton` in transparent after hover and unhover', () => {
@@ -42,9 +42,9 @@ describe('SingleFolder component', () => {
     const SettingsMenuButton = getByTestId('SettingsMenuButton')
 
     userEvent.hover(container)
-    expect(SettingsMenuButton).toHaveStyleRule('color', 'black')
+    expect(SettingsMenuButton).toHaveStyle('color: ButtonText')
 
     userEvent.unhover(container)
-    expect(SettingsMenuButton).toHaveStyleRule('color', 'transparent')
+    expect(SettingsMenuButton).toHaveStyle('color: ButtonText')
   })
 })

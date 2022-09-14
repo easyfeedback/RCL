@@ -16,7 +16,7 @@ export const ViewsStats = ({ views, fontSize, iconSize }: ViewsStatsProps) => {
         zIndex="docked"
         title={`${views}`}
         fontSize={fontSize}
-        isTruncated
+        noOfLines={1}
         maxWidth={145}
       >
         {views}

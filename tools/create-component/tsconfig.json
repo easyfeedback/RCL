@@ -3,6 +3,5 @@
     "module": "commonjs"
   },
   "extends": "../../tsconfig.json",
-  "include": ["index.ts"],
   "exclude": ["template"]
 }

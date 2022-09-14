@@ -1,6 +1,6 @@
 import { render, testA11y } from '@easyfeedback/test-utils'
 
-import { IconButton } from '../src'
+import { IconButton } from '../src/IconButton'
 
 const mockLabel = 'Mocked IconButton label'
 
@@ -11,12 +11,12 @@ describe('IconButton component', () => {
 
   it('uses a font size of `xs`, if size value is set to `sm`', () => {
     const { getByTestId } = render(<IconButton ariaLabel={mockLabel} size="sm" />)
-    expect(getByTestId('IconButton')).toHaveStyleRule('font-size', 'xs')
+    expect(getByTestId('IconButton')).toHaveStyle('font-size: xs')
   })
 
   it('uses a font size of `2xl`, if size is set to the default `lg` value', () => {
     const { getByTestId } = render(<IconButton ariaLabel={mockLabel} size="lg" />)
-    expect(getByTestId('IconButton')).toHaveStyleRule('font-size', '2xl')
+    expect(getByTestId('IconButton')).toHaveStyle('font-size: 2xl')
   })
 
   it('uses the `add` icon', () => {

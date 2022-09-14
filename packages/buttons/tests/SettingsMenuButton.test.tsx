@@ -18,12 +18,12 @@ describe('SettingsMenuButton component', () => {
   it('renders the first `MenuItem` in the default color', () => {
     const { getAllByTestId, getByTestId } = render(component)
     fireEvent.click(getByTestId('SettingsMenuButton')) // the `MenuItem` are loaded lazy at click
-    expect(getAllByTestId('MenuItem')[0]).toHaveStyleRule('color', 'gray.900')
+    expect(getAllByTestId('MenuItem')[0]).toHaveStyle('color: ButtonText')
   })
 
   it('not renders the second `MenuItem` in the default color', () => {
     const { getAllByTestId, getByTestId } = render(component)
     fireEvent.click(getByTestId('SettingsMenuButton')) // the `MenuItem` are loaded lazy at click
-    expect(getAllByTestId('MenuItem')[1]).not.toHaveStyleRule('color', 'gray.900')
+    expect(getAllByTestId('MenuItem')[1]).not.toHaveStyle('color: gray.900')
   })
 })

@@ -44,5 +44,5 @@ Limits.args = {
   title:
     'Survey about something with users from the Application of state and democracy - inspired by rainbows and flowers',
   state: 'closed',
-  views: 12345678901234567890n,
+  views: 1234567890123456,
 }

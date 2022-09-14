@@ -28,39 +28,42 @@
     "dist"
   ],
   "scripts": {
-    "build": "concurrently yarn:build:*",
+    "build": "concurrently pnpm:build:*",
     "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
-    "lint": "concurrently yarn:lint:*",
+    "lint": "concurrently pnpm:lint:*",
     "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path ../../config/.eslintignore",
     "lint:types": "tsc --noEmit",
     "test": "jest --env=jsdom --passWithNoTests",
-    "test:ci": "jest --runInBand",
-    "test:ci:cov": "yarn test:ci --coverage",
-    "test:cov": "yarn test --coverage",
-    "test:watch": "yarn test --watch -u"
+    "test:cov": "jest --env=jsdom --passWithNoTests --coverage",
+    "test:watch": "jest --env=jsdom --passWithNoTests --watch -u"
   },
   "dependencies": {
     "@easyfeedback/theme": "^1.2.0",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^1.7.3",
+    "@babel/core": "^7.19.0",
+    "@chakra-ui/react": "^2.3.2",
+    "@chakra-ui/styled-system": "^2.3.1",
+    "@chakra-ui/theme": "^2.1.11",
     "@easyfeedback/test-utils": "^1.1.9",
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "framer-motion": "^6.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "framer-motion": "^7.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "peerDependencies": {
-    "@chakra-ui/react": "^1.6.0",
-    "@emotion/react": "^11.5.0",
-    "@emotion/styled": "^11.3.0",
-    "framer-motion": "^5.2.0",
-    "react": "^16.13.0 || ^17.0.0",
-    "react-dom": "^16.13.0 || ^17.0.0"
+    "@chakra-ui/react": "^2.3.2",
+    "@chakra-ui/styled-system": "^2.3.1",
+    "@chakra-ui/theme": "^2.1.11",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "framer-motion": "^7.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "publishConfig": {
     "access": "public"
