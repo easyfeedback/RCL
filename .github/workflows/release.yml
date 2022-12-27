@@ -16,63 +16,52 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Get Node.js version
-        id: nvm
-        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
 
       - name: Setup Node.js
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Load yarn cache
-        uses: actions/cache@v2
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install
 
       - name: Lint types and code
-        run: yarn lint
+        run: pnpm run lint
 
       - name: Run jest
-        run: yarn run test:ci:cov
+        run: pnpm run test:ci:cov
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Build Packages
-        run: yarn build
+        run: pnpm run build
 
       - name: Create Release Pull Request or Publish to GitHub packages
         uses: changesets/action@master
         with:
           commit: "Update version and deploy packages"
           title: "Update version and deploy packages"
-          publish: yarn changeset publish
-          version: yarn changeset version
+          publish: pnpm run changeset publish
+          version: pnpm run changeset version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Build Storybook
-        run: yarn build:storybook
+        run: pnpm build:storybook
 
       - name: Deploy Storybook
-        uses: JamesIves/github-pages-deploy-action@4.1.3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: docs-build

@@ -21,14 +21,10 @@
     "declarationMap": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "strictPropertyInitialization": true
+    "strictPropertyInitialization": true,
+    "baseUrl": ".",
+    "preserveSymlinks": true
   },
-  "include": ["packages", "tools", "config/jest-setup.ts"],
-  "exclude": ["node_modules", "docs-build", "coverage", "dist"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS",
-      "resolveJsonModule": true
-    }
-  }
+  "include": ["packages", "tools"],
+  "exclude": ["node_modules", "docs-build", "coverage", "dist"]
 }

@@ -2,8 +2,8 @@
 
 import { join } from 'path'
 
-import execa from 'execa'
-import fs from 'fs-extra'
+import { execa } from 'execa'
+import { copySync, outputFileSync, readFileSync, realpath, renameSync, statSync } from 'fs-extra'
 import glob from 'glob'
 import Listr from 'listr'
 import _ from 'lodash'
@@ -51,7 +51,7 @@ const getArgs = async () => {
   }
 }
 
-const template = fs.realpath(join(__dirname, 'template'))
+const template = realpath(join(__dirname, 'template'))
 
 type Answers = {
   name: string
@@ -133,7 +133,7 @@ const init = async () => {
   progress.add({
     title: `Creating component folder at ${argv.filepath}`,
     task: async (ctx: { data: Answers }) => {
-      fs.copySync(await template, ctx.data.filepath, {
+      copySync(await template, ctx.data.filepath, {
         recursive: true,
         overwrite: true,
       })
@@ -148,14 +148,14 @@ const init = async () => {
       glob(ctx.data.filepath + '/**/*', (err, files) => {
         if (err) return
         files.forEach((file) => {
-          if (!fs.statSync(file).isFile()) return
-          const content = fs.readFileSync(file)
+          if (!statSync(file).isFile()) return
+          const content = readFileSync(file)
           const newFile = Mustache.render(content.toString(), ctx.data)
-          fs.outputFileSync(file, newFile)
+          outputFileSync(file, newFile)
           const newFileName = file.replace(handlebarExtension, '')
-          fs.renameSync(file, newFileName)
+          renameSync(file, newFileName)
           if (!newFileName.match(replaceComponentString)) return
-          fs.renameSync(newFileName, newFileName.replace(replaceComponentString, ctx.data.filename))
+          renameSync(newFileName, newFileName.replace(replaceComponentString, ctx.data.filename))
         })
       })
     },

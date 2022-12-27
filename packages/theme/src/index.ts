@@ -1,6 +1,6 @@
-import { theme as baseTheme, extendTheme, withDefaultColorScheme } from '@chakra-ui/react'
+import { extendTheme, theme as baseTheme, withDefaultColorScheme } from '@chakra-ui/react'
 
-import { colors, fontSizes, fonts } from './foundations'
+import { colors, fonts, fontSizes } from './foundations'
 import { styles } from './styles'
 
 export * from './hooks'
@@ -14,3 +14,5 @@ export const theme = extendTheme(withDefaultColorScheme({ colorScheme: 'gray' })
 })
 
 export type ThemeProps = typeof theme
+
+export default theme

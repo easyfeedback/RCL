@@ -1,17 +1,8 @@
 # node
 node_modules
-npm-debug.log*
 
-# yarn
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
-yarn-debug.log*
-yarn-error.log*
+# turbo
+.turbo
 
 # production
 dist
